@@ -1,0 +1,15 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Centralina ABS Tenere 700",
+      "description": "Centralina ABS stampata in 3D per Yamaha Tenere 700",
+      "price": 110,
+      "oldPrice": null,
+      "image": "centraline-ABS.png",
+      "rating": 5,
+      "badge": "Best Seller",
+      "inStock": true
+    }
+  ]
+}

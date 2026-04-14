@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <rect width="600" height="200" fill="#11151c" rx="8"/>
+
+  <polygon points="100,40 152,70 152,130 100,160 48,130 48,70"
+           fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+
+  <line x1="65" y1="100" x2="135" y2="100" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+
+  <circle cx="100" cy="100" r="10" fill="#11151c" stroke="#ffffff" stroke-width="6"/>
+  <circle cx="100" cy="100" r="3" fill="#ffffff"/>
+
+  <text x="190" y="112" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="64" font-weight="800" letter-spacing="1" fill="#ffffff">
+    AITYCONS
+  </text>
+
+  <text x="195" y="145" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="16" font-weight="500" letter-spacing="5" fill="#94a3b8">
+    TECH &amp; AUTOMATION LAB
+  </text>
+</svg>

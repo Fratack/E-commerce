@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aitycons - Logo Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #fff; padding: 40px; }
+        h1 { text-align: center; font-size: 2rem; margin-bottom: 10px;
+             background: linear-gradient(135deg, #3b82f6, #8b5cf6, #a855f7);
+             -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { text-align: center; color: #94a3b8; margin-bottom: 50px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .card { border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; padding: 30px;
+                display: flex; flex-direction: column; align-items: center; gap: 16px; }
+        .card.dark { background: #0a0a0f; }
+        .card.light { background: #f8fafc; }
+        .card h3 { font-size: 0.9rem; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase; }
+        .card.light h3 { color: #64748b; }
+        .card img, .card object { width: 100%; max-width: 500px; height: auto; }
+        .specs { max-width: 1000px; margin: 50px auto 0; border: 1px solid rgba(139,92,246,0.3);
+                 border-radius: 16px; padding: 30px; }
+        .specs h2 { font-size: 1.2rem; margin-bottom: 16px;
+                     background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .specs ul { list-style: none; color: #94a3b8; line-height: 2; }
+        .specs li::before { content: "✓ "; color: #22c55e; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>AITYCONS — Logo System</h1>
+    <p class="subtitle">Tech & Automation Lab</p>
+
+    <div class="grid">
+        <div class="card dark">
+            <h3>Full Color — Dark BG</h3>
+            <img src="logo-aitycons-color.svg" alt="Logo color">
+        </div>
+        <div class="card dark">
+            <h3>Mono White — Dark BG</h3>
+            <img src="logo-aitycons-mono-white.svg" alt="Logo mono white">
+        </div>
+        <div class="card light">
+            <h3>Mono Black — Light BG</h3>
+            <img src="logo-aitycons-mono-black.svg" alt="Logo mono black">
+        </div>
+        <div class="card dark" style="justify-content: center;">
+            <h3>Icon Only — Favicon / Badge</h3>
+            <img src="logo-aitycons-icon-only.svg" alt="Logo icon" style="max-width: 160px;">
+        </div>
+    </div>
+
+    <div class="specs">
+        <h2>Specifiche Produzione</h2>
+        <ul>
+            <li>Stampa 3D: linee min 5px (≈1.5mm a 100mm), nodi circolari solidi, no dettagli sotto 2mm</li>
+            <li>Laser su metallo: stroke-width 5-7px, forme geometriche pulite, nessun riempimento sfumato</li>
+            <li>Adesivi/vinile: versione mono-colore con contorni chiusi, ideale per plotter da taglio</li>
+            <li>Favicon/app: versione icon-only funziona fino a 16x16px</li>
+            <li>Palette: Blue #3b82f6 → Violet #8b5cf6 → Purple #a855f7 | Accent: Cyan #06b6d4</li>
+        </ul>
+    </div>
+</body>
+</html>
