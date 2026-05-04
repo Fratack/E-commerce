@@ -1,0 +1,129 @@
+[
+  {
+    "id": 1,
+    "name": "Centralina ABS Tenere 700",
+    "description": "Centralina ABS stampata in 3D per Yamaha Tenere 700",
+    "price": 110,
+    "oldPrice": null,
+    "image": "products/centralina-abs-t700/images/centralina-abs.png",
+    "rating": 5,
+    "badge": "Best Seller",
+    "inStock": true,
+    "gallery": [
+      "products/centralina-abs-t700/images/centralina-abs.png"
+    ],
+    "longDescription": "Centralina ABS di ricambio progettata e stampata in 3D con materiali di alta qualità per la Yamaha Ténéré 700. Questo componente è stato ingegnerizzato per garantire un funzionamento affidabile del sistema antibloccaggio freni, anche nelle condizioni off-road più impegnative. Realizzata in materiale tecnico resistente alle vibrazioni, alle alte temperature e agli agenti atmosferici. Ogni pezzo viene testato singolarmente prima della spedizione per assicurare la massima qualità.",
+    "specs": [
+      { "label": "Materiale", "value": "PETG rinforzato fibra di carbonio" },
+      { "label": "Processo", "value": "Stampa 3D FDM ad alta precisione" },
+      { "label": "Tolleranza", "value": "±0.1mm" },
+      { "label": "Resistenza termica", "value": "Fino a 120°C" },
+      { "label": "Peso", "value": "185g" },
+      { "label": "Colore", "value": "Nero opaco" },
+      { "label": "Garanzia", "value": "12 mesi" },
+      { "label": "Tempo di produzione", "value": "3-5 giorni lavorativi" }
+    ],
+    "compatibility": [
+      "Yamaha Ténéré 700 (2019-2026)",
+      "Yamaha Ténéré 700 Rally (2020-2026)",
+      "Yamaha Ténéré 700 World Raid (2022-2026)",
+      "Yamaha Ténéré 700 Extreme (2023-2026)"
+    ],
+    "manuals": [
+      { "name": "Guida all'installazione", "filename": "guida-installazione-abs-t700.pdf", "size": "2.4 MB" },
+      { "name": "Scheda tecnica materiale", "filename": "scheda-tecnica-petg-cf.pdf", "size": "1.1 MB" },
+      { "name": "Schema elettrico ABS", "filename": "schema-elettrico-abs.pdf", "size": "850 KB" }
+    ],
+    "sku": "AIT-T700-ABS-001",
+    "category": "Tenere 700",
+    "tags": ["ABS", "Tenere 700", "Stampa 3D", "Ricambio", "Off-road"],
+    "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
+    "returns": "Reso gratuito entro 14 giorni dalla consegna se il prodotto non è stato installato."
+  },
+  {
+    "id": 2,
+    "name": "Deflettore Aria Tenere 700",
+    "description": "Deflettore aria stampato in 3D per Yamaha Tenere 700, migliora il comfort di marcia",
+    "price": 85,
+    "oldPrice": null,
+    "image": "products/deflettore-aria-t700/images/deflettore.jpg",
+    "rating": 5,
+    "badge": "New",
+    "inStock": true,
+    "gallery": [
+      "products/deflettore-aria-t700/images/deflettore.jpg",
+      "products/deflettore-aria-t700/images/moto.jpg",
+      "products/deflettore-aria-t700/images/dettaglio.jpg"
+    ],
+    "longDescription": "Deflettore aria progettato su misura per la Yamaha Ténéré 700, realizzato tramite stampa 3D in materiale tecnico ad alta resistenza. Questo accessorio migliora sensibilmente il comfort di marcia deviando il flusso d'aria dal busto e dalle mani del pilota, riducendo la fatica durante i lunghi viaggi.",
+    "specs": [
+      { "label": "Materiale", "value": "ASA resistente ai raggi UV" },
+      { "label": "Processo", "value": "Stampa 3D FDM ad alta precisione" },
+      { "label": "Tolleranza", "value": "±0.15mm" },
+      { "label": "Resistenza termica", "value": "Fino a 100°C" },
+      { "label": "Resistenza UV", "value": "Alta — no ingiallimento" },
+      { "label": "Peso", "value": "120g" },
+      { "label": "Colore", "value": "Nero opaco" },
+      { "label": "Garanzia", "value": "12 mesi" },
+      { "label": "Tempo di produzione", "value": "3-5 giorni lavorativi" }
+    ],
+    "compatibility": [
+      "Yamaha Ténéré 700 (2019-2026)",
+      "Yamaha Ténéré 700 Rally (2020-2026)",
+      "Yamaha Ténéré 700 World Raid (2022-2026)",
+      "Yamaha Ténéré 700 Extreme (2023-2026)"
+    ],
+    "manuals": [
+      { "name": "Guida al montaggio", "filename": "guida-montaggio-deflettore-t700.pdf", "size": "1.8 MB" },
+      { "name": "Scheda tecnica ASA", "filename": "scheda-tecnica-asa.pdf", "size": "900 KB" }
+    ],
+    "sku": "AIT-T700-DEF-001",
+    "category": "Tenere 700",
+    "tags": ["Deflettore", "Tenere 700", "Stampa 3D", "Accessorio", "Comfort", "Aerodinamica"],
+    "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
+    "returns": "Reso gratuito entro 14 giorni dalla consegna se il prodotto non è stato installato."
+  },
+  {
+    "id": 3,
+    "name": "Copri-pignone Tenere 700",
+    "description": "Copri-pignone stampato in 3D per Yamaha Tenere 700, protezione ottimale della catena",
+    "price": 45,
+    "oldPrice": null,
+    "image": "products/copri-pignone-t700/images/copri-pignone-1.jpg",
+    "rating": 5,
+    "badge": "New",
+    "inStock": true,
+    "gallery": [
+      "products/copri-pignone-t700/images/copri-pignone-1.jpg",
+      "products/copri-pignone-t700/images/copri-pignone-2.jpg"
+    ],
+    "longDescription": "Copri-pignone di ricambio stampato in 3D su misura per la Yamaha Ténéré 700. Protegge il pignone di trasmissione e la catena da detriti, fango e acqua durante l'utilizzo off-road.",
+    "specs": [
+      { "label": "Materiale", "value": "PETG-CF (rinforzato fibra di carbonio)" },
+      { "label": "Processo", "value": "Stampa 3D FDM ad alta precisione" },
+      { "label": "Tolleranza", "value": "±0.1mm" },
+      { "label": "Resistenza termica", "value": "Fino a 120°C" },
+      { "label": "Resistenza agli urti", "value": "Alta" },
+      { "label": "Peso", "value": "65g" },
+      { "label": "Colore", "value": "Nero opaco" },
+      { "label": "Fissaggio", "value": "Viti originali M6 (non incluse)" },
+      { "label": "Garanzia", "value": "12 mesi" },
+      { "label": "Tempo di produzione", "value": "3-5 giorni lavorativi" }
+    ],
+    "compatibility": [
+      "Yamaha Ténéré 700 (2019-2026)",
+      "Yamaha Ténéré 700 Rally (2020-2026)",
+      "Yamaha Ténéré 700 World Raid (2022-2026)",
+      "Yamaha Ténéré 700 Extreme (2023-2026)"
+    ],
+    "manuals": [
+      { "name": "Guida alla sostituzione", "filename": "guida-sostituzione-copri-pignone-t700.pdf", "size": "1.5 MB" },
+      { "name": "Scheda tecnica PETG-CF", "filename": "scheda-tecnica-petg-cf.pdf", "size": "1.1 MB" }
+    ],
+    "sku": "AIT-T700-CPG-001",
+    "category": "Tenere 700",
+    "tags": ["Copri-pignone", "Tenere 700", "Stampa 3D", "Trasmissione", "Off-road", "Ricambio"],
+    "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
+    "returns": "Reso gratuito entro 14 giorni dalla consegna se il prodotto non è stato installato."
+  }
+]

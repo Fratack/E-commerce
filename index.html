@@ -673,6 +673,8 @@
         @media (max-width: 768px) {
             .nav-menu { display: none; }
             .hamburger { display: flex; }
+            .logo img { height: 44px; }
+            .header-container { padding: 10px 16px; }
 .products-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .hero-title { font-size: 2rem; }
             .page-title { font-size: 1.8rem; }
@@ -2171,6 +2173,20 @@
         // ============================================
         // DATI PRODOTTI
         // ============================================
+        const ADMIN_PASSWORD = '$ono1Milionario!';
+
+        const api = {
+            headers: (auth) => auth ? { 'Content-Type': 'application/json', 'x-admin-password': ADMIN_PASSWORD } : { 'Content-Type': 'application/json' },
+            getProducts: () => fetch('/api/products').then(r => r.json()),
+            saveProduct: (product, isEdit) => fetch(
+                isEdit ? `/api/products/${product.id}` : '/api/products',
+                { method: isEdit ? 'PUT' : 'POST', headers: api.headers(true), body: JSON.stringify(product) }
+            ).then(r => r.json()),
+            deleteProduct: (id) => fetch(`/api/products/${id}`, { method: 'DELETE', headers: api.headers(true) }).then(r => r.json()),
+            getNav: () => fetch('/api/nav').then(r => r.json()),
+            saveNav: (items) => fetch('/api/nav', { method: 'POST', headers: api.headers(true), body: JSON.stringify(items) }).then(r => r.json()),
+        };
+
         const products = [
             {
                 id: 1,
@@ -3947,71 +3963,39 @@
             const [wishlist, setWishlist] = React.useState([]);
             const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
-            // Admin state
+            // Prodotti e nav dal server
+            const [allProducts, setAllProducts] = React.useState([]);
+            const [navItems, setNavItems] = React.useState(defaultNavItems);
+            const [loading, setLoading] = React.useState(true);
             const [isAdmin, setIsAdmin] = React.useState(false);
-            const [customProducts, setCustomProducts] = React.useState(() => {
-                try {
-                    const saved = localStorage.getItem('aitycons_custom_products');
-                    return saved ? JSON.parse(saved) : [];
-                } catch { return []; }
-            });
-            const [hiddenDefaultIds, setHiddenDefaultIds] = React.useState(() => {
-                try {
-                    const saved = localStorage.getItem('aitycons_hidden_default_ids');
-                    return saved ? JSON.parse(saved) : [];
-                } catch { return []; }
-            });
 
-            // Nav items state (loaded from localStorage, fallback to defaultNavItems)
-            const [navItems, setNavItems] = React.useState(() => {
-                try {
-                    const saved = localStorage.getItem('aitycons_nav_items');
-                    return saved ? JSON.parse(saved) : defaultNavItems;
-                } catch { return defaultNavItems; }
-            });
+            // Carica dati dal server all'avvio
+            React.useEffect(() => {
+                Promise.all([api.getProducts(), api.getNav()])
+                    .then(([prods, nav]) => {
+                        setAllProducts(prods || []);
+                        if (nav) setNavItems(nav);
+                    })
+                    .catch(() => {})
+                    .finally(() => setLoading(false));
+            }, []);
+
+            const reloadProducts = () => api.getProducts().then(prods => setAllProducts(prods || []));
 
             const saveNavItems = (updated) => {
                 setNavItems(updated);
-                localStorage.setItem('aitycons_nav_items', JSON.stringify(updated));
+                api.saveNav(updated);
             };
 
-            // Merge default + custom products (excluding hidden defaults)
-            const allProducts = [
-                ...products.filter(p => !hiddenDefaultIds.includes(p.id)),
-                ...customProducts
-            ];
-
-            // Save custom products to localStorage
-            const saveCustomProducts = (updated) => {
-                setCustomProducts(updated);
-                localStorage.setItem('aitycons_custom_products', JSON.stringify(updated));
-            };
-
-            // Admin: save product (add or edit)
+            // Admin: salva prodotto (nuovo o modifica)
             const handleSaveProduct = (product) => {
-                const existingCustom = customProducts.find(p => p.id === product.id);
-                if (existingCustom) {
-                    // Edit existing custom product
-                    const updated = customProducts.map(p => p.id === product.id ? {...product, inStock: true} : p);
-                    saveCustomProducts(updated);
-                } else {
-                    // New product
-                    const newProduct = { ...product, inStock: true };
-                    saveCustomProducts([...customProducts, newProduct]);
-                }
+                const isEdit = allProducts.some(p => p.id === product.id);
+                api.saveProduct(product, isEdit).then(reloadProducts);
             };
 
-            // Admin: delete product
+            // Admin: elimina prodotto
             const handleDeleteProduct = (id) => {
-                const isDefault = products.some(p => p.id === id);
-                if (isDefault) {
-                    const updated = [...hiddenDefaultIds, id];
-                    setHiddenDefaultIds(updated);
-                    localStorage.setItem('aitycons_hidden_default_ids', JSON.stringify(updated));
-                } else {
-                    const updated = customProducts.filter(p => p.id !== id);
-                    saveCustomProducts(updated);
-                }
+                api.deleteProduct(id).then(reloadProducts);
             };
 
             // Navigate to product detail
@@ -4264,6 +4248,12 @@
                         );
                 }
             };
+
+            if (loading) return (
+                <div style={{display:'flex', alignItems:'center', justifyContent:'center', height:'100vh', color:'var(--text-secondary)', fontSize:'1.1rem'}}>
+                    Caricamento...
+                </div>
+            );
 
             return (
                 <div className="app">
