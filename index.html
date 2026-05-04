@@ -43,7 +43,11 @@
             color: var(--text-primary);
             line-height: 1.6;
             min-height: 100vh;
+            cursor: default;
+            caret-color: transparent;
         }
+
+        input, textarea { caret-color: auto; cursor: text; }
 
         body::before {
             content: '';
@@ -1981,16 +1985,7 @@
             position: relative;
         }
 
-        .how-steps::before {
-            content: '';
-            position: absolute;
-            top: 36px;
-            left: calc(12.5% + 20px);
-            right: calc(12.5% + 20px);
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-violet), var(--accent-cyan));
-            opacity: 0.3;
-        }
+        .how-steps::before { display: none; }
 
         .how-step {
             background: var(--bg-card);
@@ -4122,72 +4117,27 @@
                     default: // home
                         return (
                             <div className="page active">
-                                {/* Hero */}
-                                <section className="hero">
-                                    <div className="hero-eyebrow">🖨️ Stampa 3D artigianale · Made in Italy</div>
-                                    <h1 className="hero-title">
-                                        Accessori su misura<br/>
-                                        <span className="hero-title-line2">progettati da chi ama la moto</span>
-                                    </h1>
-                                    <p className="hero-desc">
-                                        Ogni prodotto nasce da un'idea, viene modellato in CAD, testato sul campo e stampato in 3D con materiali tecnici di alta qualità.
-                                        Non produciamo in serie: ogni pezzo è pensato, realizzato e controllato a mano.
-                                    </p>
-                                    <div className="hero-cta-group">
-                                        <button className="btn btn-primary" onClick={() => setCurrentPage('products')} style={{padding:'16px 36px', fontSize:'1.05rem'}}>
-                                            Scopri i Prodotti
-                                        </button>
-                                        <button className="btn btn-secondary" onClick={() => document.getElementById('come-funziona').scrollIntoView({behavior:'smooth'})} style={{padding:'16px 36px', fontSize:'1.05rem'}}>
-                                            Come Ordinare
-                                        </button>
-                                    </div>
-                                    <div className="hero-tags">
-                                        <span className="hero-tag">🔧 Progettazione meccanica</span>
-                                        <span className="hero-tag">⚡ Elettronica</span>
-                                        <span className="hero-tag">🖨️ Stampa 3D FDM</span>
-                                        <span className="hero-tag">🏍️ Yamaha Ténéré 700</span>
-                                    </div>
-                                </section>
-
                                 {/* Chi siamo */}
                                 <section className="story-section">
                                     <div className="container">
-                                        <div className="story-grid">
-                                            <div>
-                                                <div className="story-label">Chi siamo</div>
-                                                <h2 className="story-title">Un progettista appassionato,<br/>non una fabbrica</h2>
-                                                <p className="story-text">
-                                                    Sono un progettista meccanico ed elettronico con la passione per la stampa 3D e per le moto. Ogni accessorio che trovi qui è nato da un problema reale che ho incontrato in sella alla mia Ténéré 700: ho disegnato la soluzione, l'ho stampata, testata e migliorata finché non era esattamente come la volevo.
-                                                </p>
-                                                <p className="story-text">
-                                                    Non ho magazzini pieni di pezzi identici. Ogni ordine viene prodotto appositamente per te, con il materiale giusto e le tolleranze corrette. Per questo motivo gli ordini avvengono via WhatsApp: voglio capire esattamente cosa ti serve e assicurarmi che il prodotto faccia al caso tuo.
-                                                </p>
-                                                <div className="story-pills">
-                                                    <span className="story-pill">PETG-CF</span>
-                                                    <span className="story-pill">ASA UV-resistant</span>
-                                                    <span className="story-pill">CAD professionale</span>
-                                                    <span className="story-pill">Test sul campo</span>
-                                                    <span className="story-pill">Garanzia 12 mesi</span>
-                                                </div>
-                                            </div>
-                                            <div className="story-stats">
-                                                <div className="story-stat-card">
-                                                    <div className="story-stat-value">100%</div>
-                                                    <div className="story-stat-label">Produzione artigianale</div>
-                                                </div>
-                                                <div className="story-stat-card">
-                                                    <div className="story-stat-value">±0.1<span style={{fontSize:'1rem'}}>mm</span></div>
-                                                    <div className="story-stat-label">Precisione di stampa</div>
-                                                </div>
-                                                <div className="story-stat-card">
-                                                    <div className="story-stat-value">12<span style={{fontSize:'1rem'}}>mesi</span></div>
-                                                    <div className="story-stat-label">Garanzia su ogni pezzo</div>
-                                                </div>
-                                                <div className="story-stat-card">
-                                                    <div className="story-stat-value">3–5<span style={{fontSize:'1rem'}}>gg</span></div>
-                                                    <div className="story-stat-label">Tempo di produzione</div>
-                                                </div>
-                                            </div>
+                                        <div style={{maxWidth:'720px', margin:'0 auto'}}>
+                                            <h1 className="hero-title" style={{marginBottom:'16px', fontSize:'clamp(1.6rem, 4vw, 3rem)'}}>
+                                                Benvenuto in AITYCONS.<br/><span style={{fontSize:'80%'}}>Grazie di essere qui.</span>
+                                            </h1>
+                                            <p style={{fontSize:'1.1rem', color:'var(--accent-cyan)', fontStyle:'italic', lineHeight:'1.8', opacity:0.9, marginBottom:'40px'}}>
+                                                Prima di scegliere i tuoi prodotti e completare l'acquisto<br/>scopri la nostra vision: è il cuore del valore che stai per portare a casa.
+                                            </p>
+                                            <div className="story-label">Vision</div>
+                                            <h2 className="story-title">Un progettista appassionato,<br/>non una fabbrica</h2>
+                                            <p className="story-text">
+                                                Sono un progettista meccanico ed elettronico con la passione per la stampa 3D e per le moto. Ogni accessorio che trovi qui è nato da un problema reale che ho incontrato in sella alla mia Ténéré 700: ho disegnato la soluzione, l'ho stampata, testata e migliorata finché non era esattamente come la volevo.
+                                            </p>
+                                            <p className="story-text">
+                                                Ogni prodotto nasce da un'idea, viene modellato in CAD, testato sul campo e stampato in 3D con materiali tecnici di alta qualità. Non produciamo in serie: ogni pezzo è pensato, realizzato e controllato a mano.
+                                            </p>
+                                            <p className="story-text">
+                                                Non ho magazzini pieni di pezzi identici. Ogni ordine viene prodotto appositamente per te, con il materiale giusto e le tolleranze corrette. Per questo motivo gli ordini avvengono via WhatsApp: voglio capire esattamente cosa ti serve e assicurarmi che il prodotto faccia al caso tuo.
+                                            </p>
                                         </div>
                                     </div>
                                 </section>
@@ -4201,22 +4151,22 @@
                                         </div>
                                         <div className="how-steps">
                                             <div className="how-step">
-                                                <div className="how-step-number">🛍️</div>
+                                                <div className="how-step-number">1</div>
                                                 <div className="how-step-title">Scegli il prodotto</div>
                                                 <div className="how-step-desc">Sfoglia il catalogo, leggi le specifiche e aggiungi al carrello quello che ti interessa.</div>
                                             </div>
                                             <div className="how-step">
-                                                <div className="how-step-number">📋</div>
+                                                <div className="how-step-number">2</div>
                                                 <div className="how-step-title">Inserisci i tuoi dati</div>
                                                 <div className="how-step-desc">Vai al carrello e compila il form con nome, indirizzo di spedizione, email e telefono.</div>
                                             </div>
                                             <div className="how-step">
-                                                <div className="how-step-number">💬</div>
+                                                <div className="how-step-number">3</div>
                                                 <div className="how-step-title">Richiesta via WhatsApp</div>
                                                 <div className="how-step-desc">Verrai reindirizzato su WhatsApp con il tuo ordine già scritto. Confermo io disponibilità e tempi.</div>
                                             </div>
                                             <div className="how-step">
-                                                <div className="how-step-number">📦</div>
+                                                <div className="how-step-number">4</div>
                                                 <div className="how-step-title">Produzione e spedizione</div>
                                                 <div className="how-step-desc">Il pezzo viene stampato appositamente per te e spedito in 3–5 giorni lavorativi.</div>
                                             </div>
@@ -4224,25 +4174,10 @@
                                     </div>
                                 </section>
 
-                                {/* Prodotti in evidenza */}
-                                <div className="container">
-                                    <div className="products-section">
-                                        <div className="products-header">
-                                            <h2 className="products-title">🛍️ Prodotti in Evidenza</h2>
-                                        </div>
-                                        <ProductGrid
-                                            products={allProducts.slice(0, 6)}
-                                            onAddToCart={addToCart}
-                                            onToggleWishlist={toggleWishlist}
-                                            wishlist={wishlist}
-                                            onViewProduct={goToProduct}
-                                        />
-                                        <div style={{textAlign: 'center', marginTop: '40px'}}>
-                                            <button className="btn btn-primary" onClick={() => setCurrentPage('products')} style={{padding: '16px 40px', fontSize: '1.1rem'}}>
-                                                Vedi Tutti i Prodotti
-                                            </button>
-                                        </div>
-                                    </div>
+                                <div style={{textAlign: 'center', padding: '60px 20px'}}>
+                                    <button className="btn btn-primary" onClick={() => setCurrentPage('products')} style={{padding: '18px 48px', fontSize: '1.15rem'}}>
+                                        Vai ai Prodotti
+                                    </button>
                                 </div>
                             </div>
                         );
