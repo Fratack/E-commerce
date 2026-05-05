@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+  <defs>
+    <linearGradient id="gn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#3b82f6"/>
+      <stop offset="50%"  stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <!-- Blocco riscaldante -->
+  <rect x="10" y="6" width="80" height="26" rx="5" fill="url(#gn)"/>
+  <!-- Corpo nozzle (trapezio) -->
+  <polygon points="10,32 90,32 66,76 34,76" fill="url(#gn)"/>
+  <!-- Punta -->
+  <rect x="42" y="76" width="16" height="12" rx="3" fill="url(#gn)"/>
+  <!-- Filo connettore goccia -->
+  <rect x="47" y="88" width="6" height="12" fill="#06b6d4"/>
+  <!-- Goccia filamento -->
+  <circle cx="50" cy="110" r="10" fill="#06b6d4"/>
+  <!-- Linea separazione blocco/corpo -->
+  <line x1="10" y1="32" x2="90" y2="32" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+</svg>

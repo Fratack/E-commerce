@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 130">
+  <defs>
+    <linearGradient id="gp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#3b82f6"/>
+      <stop offset="50%"  stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <!-- Stem (barra verticale P) -->
+  <rect x="8" y="8" width="16" height="80" rx="4" fill="url(#gp)"/>
+  <!-- Bowl esterno (D) -->
+  <path d="M 24,8 A 30,24 0 0,1 24,56 L 24,8 Z" fill="url(#gp)"/>
+  <!-- Bowl interno (foro) — colore sfondo -->
+  <path d="M 24,20 A 18,14 0 0,1 24,48 L 24,20 Z" fill="#0a0a0f"/>
+  <!-- Connettore goccia -->
+  <rect x="13" y="88" width="6" height="14" rx="2" fill="#06b6d4"/>
+  <!-- Goccia filamento -->
+  <ellipse cx="16" cy="116" rx="9" ry="10" fill="#06b6d4"/>
+</svg>

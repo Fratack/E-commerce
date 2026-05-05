@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 112">
+  <defs>
+    <!-- Gradiente blue→violet→purple identico al sito -->
+    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#3b82f6"/>
+      <stop offset="50%"  stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Clip per sezione sinistra (evita overflow) -->
+    <clipPath id="clip-left">
+      <polygon points="0,56 50,4 144,4 144,108 50,108"/>
+    </clipPath>
+  </defs>
+
+  <!-- Banner principale: bg-primary del sito -->
+  <polygon points="0,56 50,4 490,4 540,56 490,108 50,108" fill="#0a0a0f"/>
+
+  <!-- Sezione sinistra: gradiente del sito -->
+  <polygon points="0,56 50,4 144,4 144,108 50,108" fill="url(#grad-accent)"/>
+
+  <!-- Divisore cyan (#06b6d4, colore prezzi/highlight del sito) -->
+  <line x1="144" y1="4" x2="144" y2="108" stroke="#06b6d4" stroke-width="2.5"/>
+
+  <!-- Icona: triangolo verso il basso (nozzle 3D) — scuro su gradiente -->
+  <polygon points="36,28 108,28 72,84"
+    fill="#0a0a0f"
+    stroke="white"
+    stroke-width="4"
+    stroke-linejoin="round"/>
+
+  <!-- PEGLAB — bianco su scuro -->
+  <text
+    x="166" y="83"
+    font-family="Impact, 'Arial Black', Arial, sans-serif"
+    font-size="70"
+    font-style="italic"
+    fill="white"
+    letter-spacing="6">PEGLAB</text>
+</svg>

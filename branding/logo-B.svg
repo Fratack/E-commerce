@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 68" font-family="'Courier New', Courier, monospace">
+  <!-- Icona: 3 layer orizzontali (strati stampa 3D) -->
+  <rect x="0" y="6"  width="40" height="8" rx="2" fill="#00CFCF"/>
+  <rect x="0" y="22" width="30" height="8" rx="2" fill="#222222"/>
+  <rect x="0" y="38" width="40" height="8" rx="2" fill="#222222"/>
+  <!-- Wordmark PEGLAB -->
+  <text x="58" y="54"
+    font-size="44" font-weight="700" fill="#111111" letter-spacing="2">PEGLAB</text>
+</svg>

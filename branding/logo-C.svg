@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 68" font-family="'Courier New', Courier, monospace">
+  <!-- Bracket sinistro (geometrico, cyan) -->
+  <rect x="0"  y="4"  width="16" height="5" rx="1.5" fill="#00CFCF"/>
+  <rect x="0"  y="4"  width="5"  height="60" rx="1.5" fill="#00CFCF"/>
+  <rect x="0"  y="59" width="16" height="5" rx="1.5" fill="#00CFCF"/>
+  <!-- PEGLAB -->
+  <text x="26" y="54"
+    font-size="44" font-weight="700" fill="#111111" letter-spacing="2">PEGLAB</text>
+  <!-- Bracket destro (geometrico, cyan) -->
+  <rect x="240" y="4"  width="16" height="5" rx="1.5" fill="#00CFCF"/>
+  <rect x="251" y="4"  width="5"  height="60" rx="1.5" fill="#00CFCF"/>
+  <rect x="240" y="59" width="16" height="5" rx="1.5" fill="#00CFCF"/>
+</svg>

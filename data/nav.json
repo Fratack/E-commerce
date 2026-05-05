@@ -1,1 +1,20 @@
-null
+[
+  {
+    "id": 1,
+    "label": " Home",
+    "page": "home",
+    "submenu": []
+  },
+  {
+    "id": 2,
+    "label": "Shop",
+    "page": "products",
+    "submenu": [
+      {
+        "id": 21,
+        "label": "Tenere 700",
+        "page": "products"
+      }
+    ]
+  }
+]

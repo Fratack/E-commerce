@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>PEGLAB Logo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Courier New', monospace; background: #0a0a0f; }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+    }
+    .row.dark  { background: #0a0a0f; }
+    .row.card  { background: #1a1a25; }
+    .row.light { background: #f0f0f0; }
+
+    img { max-width: 520px; width: 100%; }
+
+    .label {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 3px;
+      padding: 8px;
+      text-transform: uppercase;
+    }
+    .label.on-dark  { background: #0a0a0f; color: #333; border-top: 1px solid #1a1a25; }
+    .label.on-card  { background: #12121a; color: #333; }
+    .label.on-light { background: #ddd; color: #aaa; }
+  </style>
+</head>
+<body>
+
+  <div class="label on-dark">Sfondo sito (bg-primary)</div>
+  <div class="row dark">
+    <img src="peglab-logo.svg" alt="PEGLAB Logo">
+  </div>
+
+  <div class="label on-card">Sfondo card (bg-card)</div>
+  <div class="row card">
+    <img src="peglab-logo.svg" alt="PEGLAB Logo">
+  </div>
+
+  <div class="label on-light">Sfondo chiaro (stampa / adesivi)</div>
+  <div class="row light">
+    <img src="peglab-logo.svg" alt="PEGLAB Logo">
+  </div>
+
+</body>
+</html>
