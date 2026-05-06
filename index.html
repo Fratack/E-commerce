@@ -2276,11 +2276,11 @@
         /* ── Animazione aggiungi al carrello ───────────────── */
         .fly-particle {
             position: fixed;
-            width: 16px;
-            height: 16px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: var(--gradient-primary);
-            box-shadow: 0 0 14px rgba(139, 92, 246, 0.9);
+            box-shadow: 0 0 22px rgba(139, 92, 246, 1), 0 0 40px rgba(139, 92, 246, 0.5);
             pointer-events: none;
             z-index: 9999;
         }
@@ -2500,16 +2500,16 @@
 
             const p = document.createElement('div');
             p.className = 'fly-particle';
-            p.style.left = (startX - 8) + 'px';
-            p.style.top  = (startY - 8) + 'px';
+            p.style.left = (startX - 14) + 'px';
+            p.style.top  = (startY - 14) + 'px';
             document.body.appendChild(p);
 
             const arcY = Math.min(dy * 0.35, -70);
             p.animate([
                 { transform: 'translate(0,0) scale(1)',                        opacity: 1              },
-                { transform: `translate(${dx*.45}px,${arcY}px) scale(0.65)`,  opacity: 1, offset: 0.4 },
-                { transform: `translate(${dx}px,${dy}px) scale(0.1)`,         opacity: 0              }
-            ], { duration: 620, easing: 'cubic-bezier(0.25,0.46,0.45,0.94)', fill: 'forwards' })
+                { transform: `translate(${dx*.45}px,${arcY}px) scale(0.75)`,  opacity: 1, offset: 0.4 },
+                { transform: `translate(${dx}px,${dy}px) scale(0.15)`,        opacity: 0              }
+            ], { duration: 950, easing: 'cubic-bezier(0.25,0.46,0.45,0.94)', fill: 'forwards' })
             .onfinish = () => {
                 p.remove();
                 cartEl.classList.add('cart-bounce');
@@ -4383,9 +4383,9 @@
                                                 <div className="pg-feature-desc">Schede, centraline e progetti embedded progettati da zero per esigenze specifiche.</div>
                                             </div>
                                             <div className="pg-feature">
-                                                <div className="pg-feature-icon">🏍️</div>
-                                                <div className="pg-feature-title">Accessori moto</div>
-                                                <div className="pg-feature-desc">Nati in sella. Ogni pezzo è testato sul campo prima di essere messo in vendita.</div>
+                                                <div className="pg-feature-icon">🎯</div>
+                                                <div className="pg-feature-title">Soluzioni su misura</div>
+                                                <div className="pg-feature-desc">Prototipi, ricambi e oggetti funzionali progettati per risolvere problemi reali.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -4430,12 +4430,12 @@
                                                     <div className="pg-lab-body">
                                                         <div><span className="pg-cmd">cat</span> about.txt</div>
                                                         <div className="pg-output">Progettista meccanico ed elettronico.</div>
-                                                        <div className="pg-output">Appassionato di moto e stampa 3D.</div>
+                                                        <div className="pg-output">Appassionato di stampa 3D e design.</div>
                                                         <div className="pg-output">Ogni pezzo nasce da un problema reale.</div>
                                                         <div style={{marginTop:'8px'}}><span className="pg-cmd">ls</span> projects/</div>
-                                                        <div className="pg-output">centralina_abs/</div>
-                                                        <div className="pg-output">deflettore_aria/</div>
-                                                        <div className="pg-output">copri_pignone/</div>
+                                                        <div className="pg-output">componenti_tecnici/</div>
+                                                        <div className="pg-output">elettronica_custom/</div>
+                                                        <div className="pg-output">oggetti_funzionali/</div>
                                                         <div className="pg-output" style={{color:'var(--text-muted)'}}>+ altri in arrivo...</div>
                                                         <div style={{marginTop:'8px'}}><span className="pg-cursor">█</span></div>
                                                     </div>
@@ -4445,7 +4445,7 @@
                                                 <div className="story-label">Vision</div>
                                                 <h2 className="story-title">Un progettista appassionato,<br/>non una fabbrica</h2>
                                                 <p className="story-text">
-                                                    Sono un progettista meccanico ed elettronico con la passione per la stampa 3D e per le moto. Ogni accessorio che trovi qui è nato da un problema reale che ho incontrato in sella alla mia Ténéré 700: ho disegnato la soluzione, l'ho stampata, testata e migliorata finché non era esattamente come la volevo.
+                                                    Sono un progettista meccanico ed elettronico con la passione per la stampa 3D e il design funzionale. Ogni prodotto che trovi qui è nato da un problema reale: ho disegnato la soluzione, l'ho stampata, testata e migliorata finché non era esattamente come la volevo.
                                                 </p>
                                                 <p className="story-text">
                                                     Ogni ordine viene prodotto appositamente per te. Non ho magazzini pieni di pezzi identici: ogni pezzo è stampato, controllato e spedito a mano.
