@@ -1,20 +1,29 @@
 [
   {
     "id": 1,
-    "label": " Home",
+    "label": "Home",
     "page": "home",
     "submenu": []
   },
   {
     "id": 2,
-    "label": "Shop",
+    "label": "🏍️ Moto",
     "page": "products",
-    "submenu": [
-      {
-        "id": 21,
-        "label": "Tenere 700",
-        "page": "products"
-      }
-    ]
+    "category": "moto",
+    "submenu": []
+  },
+  {
+    "id": 3,
+    "label": "🎯 Armeria",
+    "page": "products",
+    "category": "armeria",
+    "submenu": []
+  },
+  {
+    "id": 4,
+    "label": "🎉 Eventi",
+    "page": "products",
+    "category": "eventi",
+    "submenu": []
   }
 ]

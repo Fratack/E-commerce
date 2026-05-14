@@ -69,6 +69,11 @@ app.post('/api/nav', requireAuth, (req, res) => {
     res.json({ ok: true });
 });
 
+// ── Catch-all: serve index.html per le route del frontend ─────────────────
+app.use((req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 // ── Avvio ─────────────────────────────────────────────────
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ Sito avviato su http://localhost:${PORT}`);

@@ -34,6 +34,52 @@
         }
 
         /* ============================================
+           TEMI PER CATEGORIA
+           Sovrascrivono le variabili globali sul body
+           ============================================ */
+        body[data-theme="moto"] {
+            --accent-violet:    #3b82f6;
+            --accent-cyan:      #06b6d4;
+            --border-glow:      rgba(59, 130, 246, 0.35);
+            --gradient-primary: linear-gradient(135deg, #3b82f6, #06b6d4);
+            --gradient-glow:    linear-gradient(135deg, rgba(59,130,246,0.2), rgba(6,182,212,0.2));
+        }
+        body[data-theme="moto"]::before {
+            background:
+                radial-gradient(ellipse 80% 60% at 10% 10%, rgba(59,130,246,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 90% 15%, rgba(6,182,212,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 70% 50% at 50% 40%, rgba(59,130,246,0.07) 0%, transparent 60%);
+        }
+
+        body[data-theme="armeria"] {
+            --accent-violet:    #ef4444;
+            --accent-cyan:      #f87171;
+            --border-glow:      rgba(239, 68, 68, 0.35);
+            --gradient-primary: linear-gradient(135deg, #ef4444, #dc2626);
+            --gradient-glow:    linear-gradient(135deg, rgba(239,68,68,0.2), rgba(220,38,38,0.2));
+        }
+        body[data-theme="armeria"]::before {
+            background:
+                radial-gradient(ellipse 80% 60% at 10% 10%, rgba(239,68,68,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 90% 15%, rgba(220,38,38,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 70% 50% at 50% 40%, rgba(239,68,68,0.07) 0%, transparent 60%);
+        }
+
+        body[data-theme="eventi"] {
+            --accent-violet:    #ec4899;
+            --accent-cyan:      #f472b6;
+            --border-glow:      rgba(236, 72, 153, 0.35);
+            --gradient-primary: linear-gradient(135deg, #ec4899, #db2777);
+            --gradient-glow:    linear-gradient(135deg, rgba(236,72,153,0.2), rgba(219,39,119,0.2));
+        }
+        body[data-theme="eventi"]::before {
+            background:
+                radial-gradient(ellipse 80% 60% at 10% 10%, rgba(236,72,153,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 90% 15%, rgba(219,39,119,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 70% 50% at 50% 40%, rgba(236,72,153,0.07) 0%, transparent 60%);
+        }
+
+        /* ============================================
            RESET & BASE
            ============================================ */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -434,6 +480,158 @@
 
         .price-current { font-size: 1.5rem; font-weight: 800; color: var(--accent-cyan); }
         .price-old { font-size: 1rem; color: var(--text-muted); text-decoration: line-through; }
+
+        /* ============================================
+           CATEGORY THEMING
+           ============================================ */
+        /* Accent strip top */
+        .product-card::before {
+            content: '';
+            display: block;
+            height: 4px;
+            background: var(--cat-color, var(--gradient-primary));
+            border-radius: 20px 20px 0 0;
+            margin: -1px -1px 0 -1px;
+        }
+        /* Moto — blu/cyan */
+        .product-card[data-category="moto"] {
+            --cat-color: linear-gradient(90deg,#3b82f6,#06b6d4);
+            box-shadow: 0 6px 28px rgba(59,130,246,0.22);
+        }
+        .product-card[data-category="moto"]:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 24px 64px rgba(59,130,246,0.60), 0 0 0 1px rgba(59,130,246,0.2);
+        }
+        .product-card[data-category="moto"] .btn-primary   { background: linear-gradient(135deg,#3b82f6,#06b6d4); }
+        .product-card[data-category="moto"] .product-rating { color: #3b82f6; }
+        .product-card[data-category="moto"] .price-current  { color: #06b6d4; }
+
+        /* Armeria — rosso */
+        .product-card[data-category="armeria"] {
+            --cat-color: linear-gradient(90deg,#ef4444,#dc2626);
+            box-shadow: 0 6px 28px rgba(239,68,68,0.22);
+        }
+        .product-card[data-category="armeria"]:hover {
+            border-color: #ef4444;
+            box-shadow: 0 24px 64px rgba(239,68,68,0.60), 0 0 0 1px rgba(239,68,68,0.2);
+        }
+        .product-card[data-category="armeria"] .btn-primary   { background: linear-gradient(135deg,#ef4444,#dc2626); }
+        .product-card[data-category="armeria"] .product-rating { color: #ef4444; }
+        .product-card[data-category="armeria"] .price-current  { color: #f87171; }
+
+        /* Eventi — rosa */
+        .product-card[data-category="eventi"] {
+            --cat-color: linear-gradient(90deg,#ec4899,#db2777);
+            box-shadow: 0 6px 28px rgba(236,72,153,0.22);
+        }
+        .product-card[data-category="eventi"]:hover {
+            border-color: #ec4899;
+            box-shadow: 0 24px 64px rgba(236,72,153,0.60), 0 0 0 1px rgba(236,72,153,0.2);
+        }
+        .product-card[data-category="eventi"] .btn-primary   { background: linear-gradient(135deg,#ec4899,#db2777); }
+        .product-card[data-category="eventi"] .product-rating { color: #ec4899; }
+        .product-card[data-category="eventi"] .price-current  { color: #f472b6; }
+
+        /* Category tag on product card */
+        .product-cat-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .product-cat-tag.moto  { background: rgba(59,130,246,0.15); color: #60a5fa; }
+        .product-cat-tag.armeria { background: rgba(239,68,68,0.15); color: #f87171; }
+        .product-cat-tag.eventi  { background: rgba(236,72,153,0.15); color: #f472b6; }
+
+        /* Image placeholder for products without photo */
+        .product-img-placeholder {
+            width: 100%; height: 220px;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            gap: 12px;
+            background: var(--bg-secondary);
+            font-size: 3.5rem;
+        }
+        .product-img-placeholder span { font-size: 0.85rem; color: var(--text-muted); }
+
+        /* ============================================
+           CATEGORY FILTER TABS
+           ============================================ */
+        .cat-filter-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .cat-filter-btn {
+            padding: 10px 22px;
+            border-radius: 30px;
+            border: 2px solid var(--border-glow);
+            background: transparent;
+            color: var(--text-secondary);
+            font-family: var(--font-family);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .cat-filter-btn:hover { border-color: var(--text-muted); color: var(--text-primary); }
+        .cat-filter-btn.active-all  { background: var(--gradient-primary); border-color: transparent; color: white; }
+        .cat-filter-btn.active-moto { background: linear-gradient(135deg,#3b82f6,#06b6d4); border-color: transparent; color: white; }
+        .cat-filter-btn.active-armeria { background: linear-gradient(135deg,#ef4444,#dc2626); border-color: transparent; color: white; }
+        .cat-filter-btn.active-eventi { background: linear-gradient(135deg,#ec4899,#db2777); border-color: transparent; color: white; }
+
+        /* ============================================
+           HOMEPAGE CATEGORY CARDS
+           ============================================ */
+        .cat-section { padding: 80px 0; }
+        .cat-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .cat-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-glow);
+            border-radius: 24px;
+            padding: 40px 32px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .cat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            border-radius: 24px 24px 0 0;
+        }
+        .cat-card.moto::before  { background: linear-gradient(90deg,#3b82f6,#06b6d4); }
+        .cat-card.armeria::before { background: linear-gradient(90deg,#ef4444,#dc2626); }
+        .cat-card.eventi::before  { background: linear-gradient(90deg,#ec4899,#db2777); }
+        .cat-card:hover { transform: translateY(-8px); }
+        .cat-card.moto:hover    { border-color: #3b82f6; box-shadow: 0 20px 50px rgba(59,130,246,0.25); }
+        .cat-card.armeria:hover { border-color: #ef4444; box-shadow: 0 20px 50px rgba(239,68,68,0.25); }
+        .cat-card.eventi:hover  { border-color: #ec4899; box-shadow: 0 20px 50px rgba(236,72,153,0.25); }
+        .cat-card-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .cat-card-title { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
+        .cat-card-desc  { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
+        .cat-card-count { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+        .cat-card.moto    .cat-card-count { color: #60a5fa; }
+        .cat-card.armeria .cat-card-count { color: #f87171; }
+        .cat-card.eventi  .cat-card-count { color: #f472b6; }
+        .cat-card-arrow { font-size: 1.2rem; margin-left: 6px; transition: transform 0.2s ease; }
+        .cat-card:hover .cat-card-arrow { transform: translateX(6px); }
+        @media (max-width: 768px) {
+            .cat-cards-grid { grid-template-columns: 1fr; gap: 16px; }
+            .cat-card { padding: 28px 24px; }
+        }
 
         .product-actions {
             display: flex;
@@ -2315,16 +2513,16 @@
         // ============================================
         function normalizePath(p) {
             if (!p) return p;
-            // Converti backslash in slash
+            if (p.startsWith('http')) return p;
             let s = p.replace(/\\/g, '/');
-            // Rimuovi prefisso assoluto Windows fino alla cartella progetto
-            // Es: C:/Users/fmx/Desktop/ecommerce-react/products/... → products/...
             const projMatch = s.match(/[A-Za-z]:\/.*?ecommerce[^/]*\/(.*)/i);
-            if (projMatch) return projMatch[1];
-            // Fallback: estrai dalla prima occorrenza di "products/"
-            const prodMatch = s.match(/(products\/.+)/i);
-            if (prodMatch) return prodMatch[1];
-            // Se inizia con lettera di unità senza pattern noto, restituisci convertito
+            if (projMatch) s = projMatch[1];
+            else {
+                const prodMatch = s.match(/(products\/.+)/i);
+                if (prodMatch) s = prodMatch[1];
+            }
+            // Percorso assoluto: evita che il browser lo risolva relativamente all'URL corrente
+            if (!s.startsWith('/')) s = '/' + s;
             return s;
         }
 
@@ -2522,7 +2720,12 @@
 
         // NAVBAR COMPONENT (data-driven)
         // ============================================
-        function Navbar({ currentPage, setCurrentPage, cartCount, wishlistCount, onToggleMobileMenu, mobileMenuOpen, navItems }) {
+        function Navbar({ currentPage, setCurrentPage, goToCategory, activeCategory, cartCount, wishlistCount, onToggleMobileMenu, mobileMenuOpen, navItems }) {
+            const isActive = (item) => {
+                if (item.category) return currentPage === 'products' && activeCategory === item.category;
+                return currentPage === item.page && !activeCategory;
+            };
+
             return (
                 <header className="header">
                     <div className="header-container">
@@ -2535,8 +2738,8 @@
                                 {navItems.map(item => (
                                     <li key={item.id} className={item.submenu && item.submenu.length > 0 ? 'nav-item' : ''}>
                                         <a
-                                            className={`nav-link ${currentPage === item.page ? 'active' : ''}`}
-                                            onClick={() => setCurrentPage(item.page)}
+                                            className={`nav-link ${isActive(item) ? 'active' : ''}`}
+                                            onClick={() => item.category ? goToCategory(item.category) : setCurrentPage(item.page)}
                                         >
                                             {item.label}
                                             {item.submenu && item.submenu.length > 0 && <span className="dropdown-arrow">▼</span>}
@@ -2545,7 +2748,7 @@
                                             <ul className="dropdown-menu">
                                                 {item.submenu.map(sub => (
                                                     <li key={sub.id}>
-                                                        <a onClick={() => setCurrentPage(sub.page)}>{sub.label}</a>
+                                                        <a onClick={() => sub.category ? goToCategory(sub.category) : setCurrentPage(sub.page)}>{sub.label}</a>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -2578,12 +2781,14 @@
         // ============================================
         // MOBILE MENU COMPONENT (data-driven)
         // ============================================
-        function MobileMenu({ isOpen, currentPage, setCurrentPage, wishlistCount, cartCount, navItems, onClose }) {
+        function MobileMenu({ isOpen, currentPage, setCurrentPage, goToCategory, activeCategory, wishlistCount, cartCount, navItems, onClose }) {
             if (!isOpen) return null;
 
-            const navigate = (page) => {
-                setCurrentPage(page);
-                onClose();
+            const navigate = (page) => { setCurrentPage(page); onClose(); };
+            const navigateCategory = (cat) => { goToCategory(cat); onClose(); };
+            const isActive = (item) => {
+                if (item.category) return currentPage === 'products' && activeCategory === item.category;
+                return currentPage === item.page && !activeCategory;
             };
 
             return (
@@ -2591,8 +2796,8 @@
                     {navItems.map(item => (
                         <React.Fragment key={item.id}>
                             <a
-                                className={`nav-link ${currentPage === item.page ? 'active' : ''}`}
-                                onClick={() => navigate(item.page)}
+                                className={`nav-link ${isActive(item) ? 'active' : ''}`}
+                                onClick={() => item.category ? navigateCategory(item.category) : navigate(item.page)}
                             >
                                 {item.label}
                             </a>
@@ -2601,7 +2806,7 @@
                                     key={sub.id}
                                     className="nav-link"
                                     style={{paddingLeft:'36px', fontSize:'0.9rem'}}
-                                    onClick={() => navigate(sub.page)}
+                                    onClick={() => sub.category ? navigateCategory(sub.category) : navigate(sub.page)}
                                 >
                                     {sub.label}
                                 </a>
@@ -2615,13 +2820,29 @@
         // ============================================
         // PRODUCT CARD COMPONENT
         // ============================================
+        const CAT_EMOJI = { moto: '🏍️', armeria: '🎯', eventi: '🎉' };
+        const CAT_LABEL = { moto: 'Accessori Moto', armeria: 'Accessori Armeria', eventi: 'Stampe 3D Eventi' };
+
         function ProductCard({ product, onAddToCart, onToggleWishlist, isWishlisted, onViewProduct }) {
             const stars = '★'.repeat(product.rating) + '☆'.repeat(5 - product.rating);
+            const [imgError, setImgError] = React.useState(!product.image);
 
             return (
-                <div className="product-card" style={{cursor: 'pointer'}} onClick={() => onViewProduct && onViewProduct(product.id)}>
+                <div className="product-card" data-category={product.category} style={{cursor: 'pointer'}} onClick={() => onViewProduct && onViewProduct(product.id)}>
                     <div className="product-image-wrapper">
-                        <img src={normalizePath(product.image)} alt={product.name} className="product-image" />
+                        {imgError ? (
+                            <div className="product-img-placeholder">
+                                <span>{CAT_EMOJI[product.category] || '📦'}</span>
+                                <span>Foto in arrivo</span>
+                            </div>
+                        ) : (
+                            <img
+                                src={normalizePath(product.image)}
+                                alt={product.name}
+                                className="product-image"
+                                onError={() => setImgError(true)}
+                            />
+                        )}
                         {product.badge && <span className="product-badge">{product.badge}</span>}
                         <button
                             className={`product-wishlist ${isWishlisted ? 'liked' : ''}`}
@@ -2631,6 +2852,7 @@
                         </button>
                     </div>
                     <div className="product-content">
+                        {product.category && <span className={`product-cat-tag ${product.category}`}>{CAT_LABEL[product.category] || product.category}</span>}
                         <h3 className="product-name">{product.name}</h3>
                         <div className="product-rating">{stars}</div>
                         <div className="product-price">
@@ -4155,9 +4377,23 @@
         // MAIN APP COMPONENT
         // ============================================
         function App() {
+            // Legge l'URL iniziale per capire quale pagina/prodotto mostrare
+            const parseUrl = () => {
+                const p = window.location.pathname;
+                if (p.startsWith('/prodotti/')) return { page: 'product-detail', slug: p.replace('/prodotti/', '') };
+                if (p === '/prodotti') return { page: 'products', slug: null };
+                if (p === '/carrello') return { page: 'cart', slug: null };
+                if (p === '/preferiti') return { page: 'wishlist', slug: null };
+                return { page: 'home', slug: null };
+            };
+
+            const initialUrl = parseUrl();
+
             // State
-            const [currentPage, setCurrentPage] = React.useState('home');
+            const [currentPage, setCurrentPage] = React.useState(initialUrl.slug ? 'loading' : initialUrl.page);
             const [selectedProductId, setSelectedProductId] = React.useState(null);
+            const [pendingSlug, setPendingSlug] = React.useState(initialUrl.slug);
+            const [activeCategory, setActiveCategory] = React.useState(null);
             const [cart, setCart] = React.useState(() => {
                 try { return JSON.parse(localStorage.getItem('peglab-cart')) || []; } catch { return []; }
             });
@@ -4186,6 +4422,42 @@
             React.useEffect(() => { localStorage.setItem('peglab-cart', JSON.stringify(cart)); }, [cart]);
             React.useEffect(() => { localStorage.setItem('peglab-wishlist', JSON.stringify(wishlist)); }, [wishlist]);
 
+            // Risolve lo slug pendente non appena i prodotti sono caricati
+            React.useEffect(() => {
+                if (!pendingSlug || allProducts.length === 0) return;
+                const product = allProducts.find(p => p.slug === pendingSlug);
+                if (product) {
+                    setSelectedProductId(product.id);
+                    setCurrentPage('product-detail');
+                } else {
+                    setCurrentPage('products');
+                }
+                setPendingSlug(null);
+            }, [allProducts, pendingSlug]);
+
+            // Aggiorna il tema del body al cambio di categoria
+            React.useEffect(() => {
+                document.body.dataset.theme = activeCategory || '';
+            }, [activeCategory]);
+
+            // Gestisce il tasto back/forward del browser
+            React.useEffect(() => {
+                const handlePopState = () => {
+                    const { page, slug } = parseUrl();
+                    if (slug) {
+                        const product = allProducts.find(p => p.slug === slug);
+                        if (product) {
+                            setSelectedProductId(product.id);
+                            setCurrentPage('product-detail');
+                        }
+                    } else {
+                        setCurrentPage(page);
+                    }
+                };
+                window.addEventListener('popstate', handlePopState);
+                return () => window.removeEventListener('popstate', handlePopState);
+            }, [allProducts]);
+
             const reloadProducts = () => api.getProducts().then(prods => setAllProducts(prods || []));
 
             const saveNavItems = (updated) => {
@@ -4204,11 +4476,23 @@
                 api.deleteProduct(id).then(reloadProducts);
             };
 
+            // Navigate to category
+            const goToCategory = (cat) => {
+                setActiveCategory(cat);
+                setCurrentPage('products');
+                window.history.pushState({ page: 'products' }, '', '/prodotti');
+                window.scrollTo(0, 0);
+            };
+
             // Navigate to product detail
             const goToProduct = (productId) => {
+                const product = allProducts.find(p => p.id === productId);
                 setSelectedProductId(productId);
                 setCurrentPage('product-detail');
                 window.scrollTo(0, 0);
+                if (product && product.slug) {
+                    window.history.pushState({ page: 'product-detail', productId }, '', `/prodotti/${product.slug}`);
+                }
             };
 
             // Cart functions
@@ -4272,13 +4556,15 @@
                         const selectedProduct = allProducts.find(p => p.id === selectedProductId);
                         if (!selectedProduct) return null;
                         return (
+                            <div data-category={selectedProduct.category}>
                             <ProductDetail
                                 product={selectedProduct}
                                 onAddToCart={addToCart}
                                 onToggleWishlist={toggleWishlist}
                                 isWishlisted={wishlist.includes(selectedProductId)}
-                                onBack={() => setCurrentPage('products')}
+                                onBack={() => { setCurrentPage('products'); window.history.pushState({ page: 'products' }, '', '/prodotti'); }}
                             />
+                            </div>
                         );
                     case 'cart':
                         return (
@@ -4302,20 +4588,27 @@
                         );
                     case 'info':
                         return <InfoPage />;
-                    case 'products':
+                    case 'products': {
+                        const filteredProducts = activeCategory
+                            ? allProducts.filter(p => p.category === activeCategory)
+                            : allProducts;
+                        const catCounts = { moto: 0, armeria: 0, eventi: 0 };
+                        allProducts.forEach(p => { if (catCounts[p.category] !== undefined) catCounts[p.category]++; });
                         return (
                             <div className="page active">
                                 <div className="container">
                                     <div className="page-header">
-                                        <h1 className="page-title">🛍️ Tutti i Prodotti</h1>
-                                        <p className="page-subtitle">{allProducts.length} prodotti disponibili</p>
+                                        <h1 className="page-title">
+                                            {activeCategory === 'moto' && '🏍️ Accessori Moto'}
+                                            {activeCategory === 'armeria' && '🎯 Accessori Armeria'}
+                                            {activeCategory === 'eventi' && '🎉 Stampe 3D per Eventi'}
+                                            {!activeCategory && '🛍️ Tutti i Prodotti'}
+                                        </h1>
+                                        <p className="page-subtitle">{filteredProducts.length} prodotti disponibili</p>
                                     </div>
                                     <div className="products-section">
-                                        <div className="products-header">
-                                            <h2 className="products-title">I Nostri Prodotti</h2>
-                                        </div>
                                         <ProductGrid
-                                            products={allProducts}
+                                            products={filteredProducts}
                                             onAddToCart={addToCart}
                                             onToggleWishlist={toggleWishlist}
                                             wishlist={wishlist}
@@ -4325,6 +4618,7 @@
                                 </div>
                             </div>
                         );
+                    }
                     default: // home
                         return (
                             <div className="page active">
@@ -4386,6 +4680,36 @@
                                                 <div className="pg-feature-icon">🎯</div>
                                                 <div className="pg-feature-title">Soluzioni su misura</div>
                                                 <div className="pg-feature-desc">Prototipi, ricambi e oggetti funzionali progettati per risolvere problemi reali.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                {/* CATEGORIE */}
+                                <section className="cat-section">
+                                    <div className="container">
+                                        <div className="pg-section-header">
+                                            <div className="how-label">Cosa trovi qui</div>
+                                            <h2 className="how-title">Le nostre categorie</h2>
+                                        </div>
+                                        <div className="cat-cards-grid">
+                                            <div className="cat-card moto" onClick={() => goToCategory('moto')}>
+                                                <span className="cat-card-icon">🏍️</span>
+                                                <div className="cat-card-title">Accessori Moto</div>
+                                                <div className="cat-card-desc">Ricambi e accessori stampati in 3D su misura per moto adventure e enduro. Ogni pezzo progettato e testato sul campo.</div>
+                                                <div className="cat-card-count">3 prodotti disponibili <span className="cat-card-arrow">→</span></div>
+                                            </div>
+                                            <div className="cat-card armeria" onClick={() => goToCategory('armeria')}>
+                                                <span className="cat-card-icon">🎯</span>
+                                                <div className="cat-card-title">Accessori Armeria</div>
+                                                <div className="cat-card-desc">Accessori per tiro sportivo e armeria stampati in 3D: porta caricatori, scatole porta colpi, supporti e molto altro.</div>
+                                                <div className="cat-card-count">3 prodotti disponibili <span className="cat-card-arrow">→</span></div>
+                                            </div>
+                                            <div className="cat-card eventi" onClick={() => goToCategory('eventi')}>
+                                                <span className="cat-card-icon">🎉</span>
+                                                <div className="cat-card-title">Stampe 3D per Eventi</div>
+                                                <div className="cat-card-desc">Decorazioni personalizzate per compleanni, matrimoni, battesimi ed eventi. Ogni pezzo è unico e fatto su misura per te.</div>
+                                                <div className="cat-card-count">3 prodotti disponibili <span className="cat-card-arrow">→</span></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4510,6 +4834,8 @@
                     <Navbar
                         currentPage={currentPage}
                         setCurrentPage={setCurrentPage}
+                        goToCategory={goToCategory}
+                        activeCategory={activeCategory}
                         cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
                         wishlistCount={wishlist.length}
                         onToggleMobileMenu={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -4521,6 +4847,8 @@
                         isOpen={mobileMenuOpen}
                         currentPage={currentPage}
                         setCurrentPage={setCurrentPage}
+                        goToCategory={goToCategory}
+                        activeCategory={activeCategory}
                         wishlistCount={wishlist.length}
                         cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
                         navItems={navItems}

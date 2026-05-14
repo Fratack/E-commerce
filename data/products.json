@@ -1,6 +1,8 @@
 [
   {
     "id": 1,
+    "slug": "centralina-abs-t700",
+    "category": "moto",
     "name": "Centralina ABS Tenere 700",
     "description": "Centralina ABS stampata in 3D per Yamaha Tenere 700",
     "price": 110,
@@ -31,17 +33,17 @@
     ],
     "manuals": [
       { "name": "Guida all'installazione", "filename": "guida-installazione-abs-t700.pdf", "size": "2.4 MB" },
-      { "name": "Scheda tecnica materiale", "filename": "scheda-tecnica-petg-cf.pdf", "size": "1.1 MB" },
-      { "name": "Schema elettrico ABS", "filename": "schema-elettrico-abs.pdf", "size": "850 KB" }
+      { "name": "Scheda tecnica materiale", "filename": "scheda-tecnica-petg-cf.pdf", "size": "1.1 MB" }
     ],
-    "sku": "AIT-T700-ABS-001",
-    "category": "Tenere 700",
+    "sku": "PLB-T700-ABS-001",
     "tags": ["ABS", "Tenere 700", "Stampa 3D", "Ricambio", "Off-road"],
     "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
     "returns": "Reso gratuito entro 14 giorni dalla consegna se il prodotto non è stato installato."
   },
   {
     "id": 2,
+    "slug": "deflettore-aria-t700",
+    "category": "moto",
     "name": "Deflettore Aria Tenere 700",
     "description": "Deflettore aria stampato in 3D per Yamaha Tenere 700, migliora il comfort di marcia",
     "price": 85,
@@ -55,7 +57,7 @@
       "products/deflettore-aria-t700/images/moto.jpg",
       "products/deflettore-aria-t700/images/dettaglio.jpg"
     ],
-    "longDescription": "Deflettore aria progettato su misura per la Yamaha Ténéré 700, realizzato tramite stampa 3D in materiale tecnico ad alta resistenza. Questo accessorio migliora sensibilmente il comfort di marcia deviando il flusso d'aria dal busto e dalle mani del pilota, riducendo la fatica durante i lunghi viaggi.",
+    "longDescription": "Deflettore aria progettato su misura per la Yamaha Ténéré 700, realizzato tramite stampa 3D in materiale tecnico ad alta resistenza. Migliora sensibilmente il comfort di marcia deviando il flusso d'aria dal busto e dalle mani del pilota, riducendo la fatica durante i lunghi viaggi.",
     "specs": [
       { "label": "Materiale", "value": "ASA resistente ai raggi UV" },
       { "label": "Processo", "value": "Stampa 3D FDM ad alta precisione" },
@@ -70,28 +72,27 @@
     "compatibility": [
       "Yamaha Ténéré 700 (2019-2026)",
       "Yamaha Ténéré 700 Rally (2020-2026)",
-      "Yamaha Ténéré 700 World Raid (2022-2026)",
-      "Yamaha Ténéré 700 Extreme (2023-2026)"
+      "Yamaha Ténéré 700 World Raid (2022-2026)"
     ],
     "manuals": [
-      { "name": "Guida al montaggio", "filename": "guida-montaggio-deflettore-t700.pdf", "size": "1.8 MB" },
-      { "name": "Scheda tecnica ASA", "filename": "scheda-tecnica-asa.pdf", "size": "900 KB" }
+      { "name": "Guida al montaggio", "filename": "guida-montaggio-deflettore-t700.pdf", "size": "1.8 MB" }
     ],
-    "sku": "AIT-T700-DEF-001",
-    "category": "Tenere 700",
-    "tags": ["Deflettore", "Tenere 700", "Stampa 3D", "Accessorio", "Comfort", "Aerodinamica"],
+    "sku": "PLB-T700-DEF-001",
+    "tags": ["Deflettore", "Tenere 700", "Stampa 3D", "Accessorio", "Comfort"],
     "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
     "returns": "Reso gratuito entro 14 giorni dalla consegna se il prodotto non è stato installato."
   },
   {
     "id": 3,
+    "slug": "copri-pignone-t700",
+    "category": "moto",
     "name": "Copri-pignone Tenere 700",
     "description": "Copri-pignone stampato in 3D per Yamaha Tenere 700, protezione ottimale della catena",
     "price": 45,
     "oldPrice": null,
     "image": "products/copri-pignone-t700/images/copri-pignone-1.jpg",
     "rating": 5,
-    "badge": "New",
+    "badge": null,
     "inStock": true,
     "gallery": [
       "products/copri-pignone-t700/images/copri-pignone-1.jpg",
@@ -113,17 +114,203 @@
     "compatibility": [
       "Yamaha Ténéré 700 (2019-2026)",
       "Yamaha Ténéré 700 Rally (2020-2026)",
-      "Yamaha Ténéré 700 World Raid (2022-2026)",
-      "Yamaha Ténéré 700 Extreme (2023-2026)"
+      "Yamaha Ténéré 700 World Raid (2022-2026)"
     ],
-    "manuals": [
-      { "name": "Guida alla sostituzione", "filename": "guida-sostituzione-copri-pignone-t700.pdf", "size": "1.5 MB" },
-      { "name": "Scheda tecnica PETG-CF", "filename": "scheda-tecnica-petg-cf.pdf", "size": "1.1 MB" }
-    ],
-    "sku": "AIT-T700-CPG-001",
-    "category": "Tenere 700",
-    "tags": ["Copri-pignone", "Tenere 700", "Stampa 3D", "Trasmissione", "Off-road", "Ricambio"],
+    "manuals": [],
+    "sku": "PLB-T700-CPG-001",
+    "tags": ["Copri-pignone", "Tenere 700", "Stampa 3D", "Trasmissione", "Off-road"],
     "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
     "returns": "Reso gratuito entro 14 giorni dalla consegna se il prodotto non è stato installato."
+  },
+  {
+    "id": 4,
+    "slug": "porta-caricatori-anschutz",
+    "category": "armeria",
+    "name": "Porta Caricatori Anschutz 1827 Biathlon",
+    "description": "Porta caricatori stampato in 3D su misura per carabina Anschutz 1827 Biathlon",
+    "price": 45,
+    "oldPrice": null,
+    "image": "products/Anschultz/images/Anschultz.jpg",
+    "rating": 5,
+    "badge": "New",
+    "inStock": true,
+    "gallery": [
+      "products/Anschultz/images/Anschultz.jpg",
+      "products/Anschultz/images/anchultz2.jpg"
+    ],
+    "longDescription": "Porta caricatori realizzato in stampa 3D su misura per la carabina Anschutz 1827 Biathlon. Progettato per offrire un aggancio sicuro e un rilascio rapido, ideale sia per l'allenamento che per la gara. Realizzato in PETG ad alta resistenza, garantisce durabilità e leggerezza.",
+    "specs": [
+      { "label": "Materiale", "value": "PETG rinforzato" },
+      { "label": "Processo", "value": "Stampa 3D FDM ad alta precisione" },
+      { "label": "Tolleranza", "value": "±0.1mm" },
+      { "label": "Compatibilità", "value": "Anschutz 1827 Biathlon" },
+      { "label": "Colore", "value": "Nero opaco" },
+      { "label": "Fissaggio", "value": "Viti M3 incluse" },
+      { "label": "Garanzia", "value": "12 mesi" },
+      { "label": "Tempo di produzione", "value": "3-5 giorni lavorativi" }
+    ],
+    "compatibility": [
+      "Anschutz 1827 Biathlon",
+      "Anschutz 1827 F Biathlon"
+    ],
+    "manuals": [],
+    "sku": "PLB-ARM-ANC-001",
+    "tags": ["Anschutz", "Biathlon", "Porta caricatori", "Stampa 3D", "Tiro sportivo"],
+    "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
+    "returns": "Reso gratuito entro 14 giorni dalla consegna se il prodotto non è stato utilizzato."
+  },
+  {
+    "id": 5,
+    "slug": "scatola-portacolpi-9x21",
+    "category": "armeria",
+    "name": "Scatola Porta Colpi 9×21",
+    "description": "Scatola porta munizioni stampata in 3D per calibro 9×21, organizzazione perfetta al poligono",
+    "price": 28,
+    "oldPrice": null,
+    "image": "products/scatola-portacolpi/images/scatola_portacolpi.png",
+    "rating": 5,
+    "badge": null,
+    "inStock": true,
+    "gallery": [
+      "products/scatola-portacolpi/images/scatola_portacolpi.png"
+    ],
+    "longDescription": "Scatola porta colpi progettata per il calibro 9×21, ideale per l'uso al poligono di tiro. Mantiene le munizioni ordinate e accessibili, con alloggiamenti singoli che permettono un conteggio rapido. Realizzata in PLA+ resistente agli urti.",
+    "specs": [
+      { "label": "Materiale", "value": "PLA+ resistente agli urti" },
+      { "label": "Processo", "value": "Stampa 3D FDM" },
+      { "label": "Calibro", "value": "9×21" },
+      { "label": "Capacità", "value": "50 colpi" },
+      { "label": "Colore", "value": "Nero opaco" },
+      { "label": "Tempo di produzione", "value": "2-4 giorni lavorativi" }
+    ],
+    "compatibility": [
+      "Calibro 9×21 IMI",
+      "Calibro 9×21 standard"
+    ],
+    "manuals": [],
+    "sku": "PLB-ARM-SPC-001",
+    "tags": ["Porta colpi", "9x21", "Poligono", "Stampa 3D", "Tiro sportivo"],
+    "shipping": "Spedizione gratuita in Italia. Consegna in 4-6 giorni lavorativi.",
+    "returns": "Reso gratuito entro 14 giorni dalla consegna."
+  },
+  {
+    "id": 6,
+    "slug": "supporto-pistola-da-banco",
+    "category": "armeria",
+    "name": "Supporto Pistola da Banco",
+    "description": "Supporto ergonomico stampato in 3D per pistola, ideale per manutenzione e pulizia al banco",
+    "price": 38,
+    "oldPrice": null,
+    "image": "",
+    "rating": 5,
+    "badge": "New",
+    "inStock": true,
+    "gallery": [],
+    "longDescription": "Supporto da banco per pistola, progettato per mantenere l'arma in posizione stabile durante la manutenzione, la pulizia o la regolazione delle mire. Base antiscivolo e struttura a cavalletto regolabile. Compatibile con la maggior parte delle pistole semiautomatiche standard.",
+    "specs": [
+      { "label": "Materiale", "value": "PETG rinforzato" },
+      { "label": "Processo", "value": "Stampa 3D FDM" },
+      { "label": "Compatibilità", "value": "Pistole semi-auto standard" },
+      { "label": "Base", "value": "Antiscivolo in gomma" },
+      { "label": "Colore", "value": "Nero opaco" },
+      { "label": "Tempo di produzione", "value": "3-5 giorni lavorativi" }
+    ],
+    "compatibility": [
+      "Beretta 92/96",
+      "Glock 17/19",
+      "CZ 75/Shadow",
+      "Altre pistole semi-auto standard"
+    ],
+    "manuals": [],
+    "sku": "PLB-ARM-SPB-001",
+    "tags": ["Supporto pistola", "Da banco", "Manutenzione", "Stampa 3D", "Tiro sportivo"],
+    "shipping": "Spedizione gratuita in Italia. Consegna in 5-7 giorni lavorativi.",
+    "returns": "Reso gratuito entro 14 giorni dalla consegna."
+  },
+  {
+    "id": 7,
+    "slug": "kit-compleanno-personalizzato",
+    "category": "eventi",
+    "name": "Kit Compleanno Personalizzato",
+    "description": "Decorazioni 3D personalizzate per feste di compleanno: topper torta, segnaposto e ghirlanda con nome",
+    "price": 29,
+    "oldPrice": null,
+    "image": "",
+    "rating": 5,
+    "badge": "Personalizzabile",
+    "inStock": true,
+    "gallery": [],
+    "longDescription": "Kit completo di decorazioni stampate in 3D per feste di compleanno. Ogni elemento è personalizzabile con nome, età e tema a scelta. Il kit include topper per la torta, segnaposto e lettere 3D per la ghirlanda. Prodotto su ordine in 5-7 giorni lavorativi.",
+    "specs": [
+      { "label": "Materiale", "value": "PLA+ colorato" },
+      { "label": "Colori disponibili", "value": "Oltre 20 colori a scelta" },
+      { "label": "Personalizzazione", "value": "Nome, età, tema" },
+      { "label": "Incluso nel kit", "value": "Topper torta + segnaposto (x6) + lettere ghirlanda" },
+      { "label": "Tempo di produzione", "value": "5-7 giorni lavorativi" }
+    ],
+    "compatibility": [],
+    "manuals": [],
+    "sku": "PLB-EVT-KCB-001",
+    "tags": ["Compleanno", "Personalizzato", "Stampa 3D", "Decorazioni", "Festa"],
+    "shipping": "Spedizione in Italia. Consegna in 7-10 giorni lavorativi.",
+    "returns": "Prodotto personalizzato: non soggetto a reso salvo difetti di produzione."
+  },
+  {
+    "id": 8,
+    "slug": "tableau-mariage-3d",
+    "category": "eventi",
+    "name": "Tableau de Mariage 3D",
+    "description": "Tableau de mariage stampato in 3D, elegante e personalizzato per il tuo matrimonio",
+    "price": 55,
+    "oldPrice": null,
+    "image": "",
+    "rating": 5,
+    "badge": "Best Seller",
+    "inStock": true,
+    "gallery": [],
+    "longDescription": "Tableau de mariage realizzato in stampa 3D con design elegante e personalizzabile. Struttura con cornice e supporti per le card degli ospiti, oppure con nomi incisi direttamente sul pannello. Disponibile in diversi stili: romantico, moderno, boho. Prodotto su misura in base al numero di tavoli e ospiti.",
+    "specs": [
+      { "label": "Materiale", "value": "PLA+ o PETG bianco/avorio" },
+      { "label": "Stili disponibili", "value": "Romantico, Moderno, Boho" },
+      { "label": "Personalizzazione", "value": "Nomi sposi, data, numero tavoli" },
+      { "label": "Dimensioni", "value": "Su richiesta (standard 40×60 cm)" },
+      { "label": "Tempo di produzione", "value": "7-10 giorni lavorativi" }
+    ],
+    "compatibility": [],
+    "manuals": [],
+    "sku": "PLB-EVT-TBM-001",
+    "tags": ["Matrimonio", "Tableau", "Personalizzato", "Stampa 3D", "Wedding"],
+    "shipping": "Spedizione in Italia con imballaggio rinforzato. Consegna in 10-14 giorni lavorativi.",
+    "returns": "Prodotto personalizzato: non soggetto a reso salvo difetti di produzione."
+  },
+  {
+    "id": 9,
+    "slug": "bomboniere-battesimo-3d",
+    "category": "eventi",
+    "name": "Bomboniere Battesimo 3D",
+    "description": "Bomboniere personalizzate stampate in 3D per battesimi e cerimonie, minimo 10 pezzi",
+    "price": 45,
+    "oldPrice": null,
+    "image": "",
+    "rating": 5,
+    "badge": null,
+    "inStock": true,
+    "gallery": [],
+    "longDescription": "Bomboniere personalizzate in stampa 3D per battesimi, cresime e prime comunioni. Ogni pezzo riporta il nome del bambino e la data della cerimonia. Disponibili in varie forme: stelline, cuori, croci, angioletti. Il prezzo si riferisce a un kit da 10 pezzi. Per quantità maggiori contattaci per un preventivo.",
+    "specs": [
+      { "label": "Materiale", "value": "PLA+ colorato" },
+      { "label": "Personalizzazione", "value": "Nome + data cerimonia" },
+      { "label": "Forme disponibili", "value": "Stella, cuore, croce, angioletto" },
+      { "label": "Colori", "value": "Bianco, celeste, rosa, oro, argento" },
+      { "label": "Quantità minima", "value": "10 pezzi" },
+      { "label": "Prezzo", "value": "€45 per kit da 10 pezzi" },
+      { "label": "Tempo di produzione", "value": "7-10 giorni lavorativi" }
+    ],
+    "compatibility": [],
+    "manuals": [],
+    "sku": "PLB-EVT-BBT-001",
+    "tags": ["Battesimo", "Bomboniere", "Personalizzato", "Stampa 3D", "Cerimonia"],
+    "shipping": "Spedizione in Italia con imballaggio protettivo. Consegna in 10-14 giorni lavorativi.",
+    "returns": "Prodotto personalizzato: non soggetto a reso salvo difetti di produzione."
   }
 ]
