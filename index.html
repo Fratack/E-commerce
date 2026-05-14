@@ -52,17 +52,17 @@
         }
 
         body[data-theme="armeria"] {
-            --accent-violet:    #ef4444;
-            --accent-cyan:      #f87171;
-            --border-glow:      rgba(239, 68, 68, 0.35);
-            --gradient-primary: linear-gradient(135deg, #ef4444, #dc2626);
-            --gradient-glow:    linear-gradient(135deg, rgba(239,68,68,0.2), rgba(220,38,38,0.2));
+            --accent-violet:    #22c55e;
+            --accent-cyan:      #4ade80;
+            --border-glow:      rgba(34, 197, 94, 0.35);
+            --gradient-primary: linear-gradient(135deg, #22c55e, #16a34a);
+            --gradient-glow:    linear-gradient(135deg, rgba(34,197,94,0.2), rgba(22,163,74,0.2));
         }
         body[data-theme="armeria"]::before {
             background:
-                radial-gradient(ellipse 80% 60% at 10% 10%, rgba(239,68,68,0.15) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 80% at 90% 15%, rgba(220,38,38,0.12) 0%, transparent 55%),
-                radial-gradient(ellipse 70% 50% at 50% 40%, rgba(239,68,68,0.07) 0%, transparent 60%);
+                radial-gradient(ellipse 80% 60% at 10% 10%, rgba(34,197,94,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 90% 15%, rgba(22,163,74,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 70% 50% at 50% 40%, rgba(34,197,94,0.07) 0%, transparent 60%);
         }
 
         body[data-theme="eventi"] {
@@ -152,8 +152,32 @@
         /* Menu Desktop */
         .nav-menu {
             display: flex;
+            align-items: center;
             gap: 8px;
             list-style: none;
+        }
+
+        /* Riquadro Shop in navbar */
+        .nav-shop-group {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 4px 6px;
+            position: relative;
+        }
+        .nav-shop-label {
+            position: absolute;
+            top: -9px;
+            left: 14px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: var(--bg-primary);
+            padding: 0 5px;
         }
 
         .nav-link {
@@ -441,24 +465,6 @@
             font-size: 0.8rem;
         }
 
-        .product-wishlist {
-            position: absolute;
-            top: 18px; left: 18px;
-            width: 40px; height: 40px;
-            background: rgba(0,0,0,0.5);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-wishlist:hover { background: var(--danger); }
-        .product-wishlist.liked { background: var(--danger); color: white; }
-
         .product-content { padding: 20px 24px; display: flex; flex-direction: column; flex: 1; }
 
         .product-name {
@@ -508,16 +514,16 @@
 
         /* Armeria — rosso */
         .product-card[data-category="armeria"] {
-            --cat-color: linear-gradient(90deg,#ef4444,#dc2626);
-            box-shadow: 0 6px 28px rgba(239,68,68,0.22);
+            --cat-color: linear-gradient(90deg,#22c55e,#16a34a);
+            box-shadow: 0 6px 28px rgba(34,197,94,0.22);
         }
         .product-card[data-category="armeria"]:hover {
-            border-color: #ef4444;
-            box-shadow: 0 24px 64px rgba(239,68,68,0.60), 0 0 0 1px rgba(239,68,68,0.2);
+            border-color: #22c55e;
+            box-shadow: 0 24px 64px rgba(34,197,94,0.60), 0 0 0 1px rgba(34,197,94,0.2);
         }
-        .product-card[data-category="armeria"] .btn-primary   { background: linear-gradient(135deg,#ef4444,#dc2626); }
-        .product-card[data-category="armeria"] .product-rating { color: #ef4444; }
-        .product-card[data-category="armeria"] .price-current  { color: #f87171; }
+        .product-card[data-category="armeria"] .btn-primary   { background: linear-gradient(135deg,#22c55e,#16a34a); }
+        .product-card[data-category="armeria"] .product-rating { color: #22c55e; }
+        .product-card[data-category="armeria"] .price-current  { color: #4ade80; }
 
         /* Eventi — rosa */
         .product-card[data-category="eventi"] {
@@ -544,7 +550,7 @@
             margin-bottom: 8px;
         }
         .product-cat-tag.moto  { background: rgba(59,130,246,0.15); color: #60a5fa; }
-        .product-cat-tag.armeria { background: rgba(239,68,68,0.15); color: #f87171; }
+        .product-cat-tag.armeria { background: rgba(34,197,94,0.15); color: #4ade80; }
         .product-cat-tag.eventi  { background: rgba(236,72,153,0.15); color: #f472b6; }
 
         /* Image placeholder for products without photo */
@@ -582,7 +588,7 @@
         .cat-filter-btn:hover { border-color: var(--text-muted); color: var(--text-primary); }
         .cat-filter-btn.active-all  { background: var(--gradient-primary); border-color: transparent; color: white; }
         .cat-filter-btn.active-moto { background: linear-gradient(135deg,#3b82f6,#06b6d4); border-color: transparent; color: white; }
-        .cat-filter-btn.active-armeria { background: linear-gradient(135deg,#ef4444,#dc2626); border-color: transparent; color: white; }
+        .cat-filter-btn.active-armeria { background: linear-gradient(135deg,#22c55e,#16a34a); border-color: transparent; color: white; }
         .cat-filter-btn.active-eventi { background: linear-gradient(135deg,#ec4899,#db2777); border-color: transparent; color: white; }
 
         /* ============================================
@@ -613,18 +619,18 @@
             border-radius: 24px 24px 0 0;
         }
         .cat-card.moto::before  { background: linear-gradient(90deg,#3b82f6,#06b6d4); }
-        .cat-card.armeria::before { background: linear-gradient(90deg,#ef4444,#dc2626); }
+        .cat-card.armeria::before { background: linear-gradient(90deg,#22c55e,#16a34a); }
         .cat-card.eventi::before  { background: linear-gradient(90deg,#ec4899,#db2777); }
         .cat-card:hover { transform: translateY(-8px); }
         .cat-card.moto:hover    { border-color: #3b82f6; box-shadow: 0 20px 50px rgba(59,130,246,0.25); }
-        .cat-card.armeria:hover { border-color: #ef4444; box-shadow: 0 20px 50px rgba(239,68,68,0.25); }
+        .cat-card.armeria:hover { border-color: #22c55e; box-shadow: 0 20px 50px rgba(34,197,94,0.25); }
         .cat-card.eventi:hover  { border-color: #ec4899; box-shadow: 0 20px 50px rgba(236,72,153,0.25); }
         .cat-card-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
         .cat-card-title { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
         .cat-card-desc  { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
         .cat-card-count { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
         .cat-card.moto    .cat-card-count { color: #60a5fa; }
-        .cat-card.armeria .cat-card-count { color: #f87171; }
+        .cat-card.armeria .cat-card-count { color: #4ade80; }
         .cat-card.eventi  .cat-card-count { color: #f472b6; }
         .cat-card-arrow { font-size: 1.2rem; margin-left: 6px; transition: transform 0.2s ease; }
         .cat-card:hover .cat-card-arrow { transform: translateX(6px); }
@@ -778,11 +784,6 @@
         .empty-cart p { color: var(--text-muted); margin-bottom: 20px; }
 
         /* ============================================
-           WISHLIST PAGE
-           ============================================ */
-        .wishlist-section { padding: 40px 0; }
-
-        /* ============================================
            INFO PAGE
            ============================================ */
         .info-content {
@@ -828,42 +829,6 @@
         .info-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
         .info-card p { font-size: 0.95rem; color: var(--text-muted); }
 
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-glow);
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-section h4 {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: var(--text-primary);
-        }
-
-        .footer-section ul { list-style: none; }
-        .footer-section ul li { margin-bottom: 10px; }
-        .footer-section ul li a { color: var(--text-secondary); }
-        .footer-section ul li a:hover { color: var(--accent-violet); }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            margin-top: 30px;
-            border-top: 1px solid var(--border-glow);
-            color: var(--text-muted);
-        }
 
         /* ============================================
            RESPONSIVE
@@ -887,7 +852,6 @@
             .cart-item-info h3 { font-size: 0.95rem; word-break: break-word; }
             .cart-item-remove { font-size: 1.2rem; padding: 4px; }
 
-            .footer-content { grid-template-columns: 1fr; text-align: center; }
         }
 
         @media (max-width: 480px) {
@@ -1153,24 +1117,6 @@
             font-size: 1.1rem;
         }
 
-        .pd-actions .btn-wishlist {
-            width: 52px;
-            height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-card);
-            border: 1px solid var(--border-glow);
-            border-radius: 14px;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .pd-actions .btn-wishlist:hover {
-            border-color: var(--danger);
-            background: rgba(239, 68, 68, 0.1);
-        }
 
         /* Info badges row */
         .pd-info-badges {
@@ -2720,7 +2666,7 @@
 
         // NAVBAR COMPONENT (data-driven)
         // ============================================
-        function Navbar({ currentPage, setCurrentPage, goToCategory, activeCategory, cartCount, wishlistCount, onToggleMobileMenu, mobileMenuOpen, navItems }) {
+        function Navbar({ currentPage, setCurrentPage, goToCategory, activeCategory, cartCount, onToggleMobileMenu, mobileMenuOpen, navItems }) {
             const isActive = (item) => {
                 if (item.category) return currentPage === 'products' && activeCategory === item.category;
                 return currentPage === item.page && !activeCategory;
@@ -2729,40 +2675,46 @@
             return (
                 <header className="header">
                     <div className="header-container">
-                        <div className="logo" onClick={() => setCurrentPage('home')}>
+                        <div className="logo" onClick={() => setCurrentPage('home')} onDoubleClick={() => setCurrentPage(isAdmin ? 'admin' : 'admin-login')}>
                             <img src="branding/peglab-logo.svg" alt="PEGLAB" />
                         </div>
 
                         <nav>
                             <ul className="nav-menu">
-                                {navItems.map(item => (
-                                    <li key={item.id} className={item.submenu && item.submenu.length > 0 ? 'nav-item' : ''}>
+                                {navItems.filter(item => !item.category).map(item => (
+                                    <li key={item.id}>
                                         <a
                                             className={`nav-link ${isActive(item) ? 'active' : ''}`}
-                                            onClick={() => item.category ? goToCategory(item.category) : setCurrentPage(item.page)}
+                                            onClick={() => {
+                                                setCurrentPage(item.page);
+                                                const urlMap = { home: '/', info: '/info', cart: '/carrello' };
+                                                window.history.pushState({}, '', urlMap[item.page] || '/');
+                                            }}
                                         >
                                             {item.label}
-                                            {item.submenu && item.submenu.length > 0 && <span className="dropdown-arrow">▼</span>}
                                         </a>
-                                        {item.submenu && item.submenu.length > 0 && (
-                                            <ul className="dropdown-menu">
-                                                {item.submenu.map(sub => (
-                                                    <li key={sub.id}>
-                                                        <a onClick={() => sub.category ? goToCategory(sub.category) : setCurrentPage(sub.page)}>{sub.label}</a>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
                                     </li>
                                 ))}
+                                {navItems.some(item => item.category) && (
+                                    <li>
+                                        <div className="nav-shop-group">
+                                            <span className="nav-shop-label">Shop</span>
+                                            {navItems.filter(item => item.category).map(item => (
+                                                <a
+                                                    key={item.id}
+                                                    className={`nav-link ${isActive(item) ? 'active' : ''}`}
+                                                    onClick={() => goToCategory(item.category)}
+                                                >
+                                                    {item.label}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </li>
+                                )}
                             </ul>
                         </nav>
 
                         <div className="header-icons">
-                            <div className="icon-btn" onClick={() => setCurrentPage('wishlist')} title="Wishlist">
-                                ❤️
-                                {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
-                            </div>
                             <div id="cart-icon-btn" className="icon-btn" onClick={() => setCurrentPage('cart')} title="Carrello">
                                 🛒
                                 {cartCount > 0 && <span className="badge">{cartCount}</span>}
@@ -2781,10 +2733,15 @@
         // ============================================
         // MOBILE MENU COMPONENT (data-driven)
         // ============================================
-        function MobileMenu({ isOpen, currentPage, setCurrentPage, goToCategory, activeCategory, wishlistCount, cartCount, navItems, onClose }) {
+        function MobileMenu({ isOpen, currentPage, setCurrentPage, goToCategory, activeCategory, cartCount, navItems, onClose }) {
             if (!isOpen) return null;
 
-            const navigate = (page) => { setCurrentPage(page); onClose(); };
+            const urlMap = { home: '/', info: '/info', cart: '/carrello' };
+            const navigate = (page) => {
+                setCurrentPage(page);
+                window.history.pushState({}, '', urlMap[page] || '/');
+                onClose();
+            };
             const navigateCategory = (cat) => { goToCategory(cat); onClose(); };
             const isActive = (item) => {
                 if (item.category) return currentPage === 'products' && activeCategory === item.category;
@@ -2823,7 +2780,7 @@
         const CAT_EMOJI = { moto: '🏍️', armeria: '🎯', eventi: '🎉' };
         const CAT_LABEL = { moto: 'Accessori Moto', armeria: 'Accessori Armeria', eventi: 'Stampe 3D Eventi' };
 
-        function ProductCard({ product, onAddToCart, onToggleWishlist, isWishlisted, onViewProduct }) {
+        function ProductCard({ product, onAddToCart, onViewProduct }) {
             const stars = '★'.repeat(product.rating) + '☆'.repeat(5 - product.rating);
             const [imgError, setImgError] = React.useState(!product.image);
 
@@ -2844,12 +2801,6 @@
                             />
                         )}
                         {product.badge && <span className="product-badge">{product.badge}</span>}
-                        <button
-                            className={`product-wishlist ${isWishlisted ? 'liked' : ''}`}
-                            onClick={(e) => { e.stopPropagation(); onToggleWishlist(product.id); }}
-                        >
-                            {isWishlisted ? '❤️' : '🤍'}
-                        </button>
                     </div>
                     <div className="product-content">
                         {product.category && <span className={`product-cat-tag ${product.category}`}>{CAT_LABEL[product.category] || product.category}</span>}
@@ -2872,7 +2823,7 @@
         // ============================================
         // PRODUCTS GRID COMPONENT
         // ============================================
-        function ProductGrid({ products, onAddToCart, onToggleWishlist, wishlist, onViewProduct }) {
+        function ProductGrid({ products, onAddToCart, onViewProduct }) {
             if (products.length === 0) {
                 return (
                     <div className="no-products">
@@ -2889,8 +2840,6 @@
                             key={product.id}
                             product={product}
                             onAddToCart={onAddToCart}
-                            onToggleWishlist={onToggleWishlist}
-                            isWishlisted={wishlist.includes(product.id)}
                             onViewProduct={onViewProduct}
                         />
                     ))}
@@ -3084,84 +3033,145 @@
             );
         }
 
-        // ============================================
-        // WISHLIST PAGE COMPONENT
-        // ============================================
-        function WishlistPage({ wishlist, products, onAddToCart, onToggleWishlist, onViewProduct }) {
-            const wishlistProducts = products.filter(p => wishlist.includes(p.id));
-
-            return (
-                <div className="page active">
-                    <div className="container">
-                        <div className="page-header">
-                            <h1 className="page-title">❤️ Wishlist</h1>
-                            <p className="page-subtitle">{wishlistProducts.length} prodotti salvati</p>
-                        </div>
-                        <div className="wishlist-section">
-                            {wishlistProducts.length === 0 ? (
-                                <div className="no-products">
-                                    <h3>💔 Nessun prodotto nella wishlist</h3>
-                                    <p>Aggiungi prodotti che ti piacciono</p>
-                                </div>
-                            ) : (
-                                <ProductGrid
-                                    products={wishlistProducts}
-                                    onAddToCart={onAddToCart}
-                                    onToggleWishlist={onToggleWishlist}
-                                    wishlist={wishlist}
-                                    onViewProduct={onViewProduct}
-                                />
-                            )}
-                        </div>
-                    </div>
-                </div>
-            );
-        }
 
         // ============================================
-        // INFO PAGE COMPONENT
+        // INFO SPEDIZIONE E CONTATTO PAGE
         // ============================================
         function InfoPage() {
             return (
                 <div className="page active">
-                    <div className="container">
-                        <div className="info-content">
-                            <h2>ℹ️ Chi Siamo</h2>
-                            <p>Benvenuto nel nostro negozio online! Siamo un'azienda italiana leader nel settore dell'elettronica di consumo.</p>
-                            
+                    <div className="container" style={{maxWidth:'860px'}}>
+                        <div className="page-header">
+                            <h1 className="page-title">📦 Spedizioni, Pagamenti & Contatti</h1>
+                            <p className="page-subtitle">Tutto quello che devi sapere prima di ordinare</p>
+                        </div>
+
+                        {/* COME FUNZIONA */}
+                        <section style={{marginBottom:'60px'}}>
+                            <div className="how-header">
+                                <div className="how-label">Processo d'acquisto</div>
+                                <h2 className="how-title">Come funziona l'ordine</h2>
+                            </div>
+                            <div className="how-steps">
+                                <div className="how-step">
+                                    <div className="how-step-number">1</div>
+                                    <div className="how-step-title">Scegli il prodotto</div>
+                                    <div className="how-step-desc">Sfoglia il catalogo, leggi le specifiche e aggiungi al carrello quello che ti interessa.</div>
+                                </div>
+                                <div className="how-step">
+                                    <div className="how-step-number">2</div>
+                                    <div className="how-step-title">Inserisci i tuoi dati</div>
+                                    <div className="how-step-desc">Vai al carrello e compila il form con nome, indirizzo di spedizione, email e telefono.</div>
+                                </div>
+                                <div className="how-step">
+                                    <div className="how-step-number">3</div>
+                                    <div className="how-step-title">Richiesta via WhatsApp</div>
+                                    <div className="how-step-desc">Verrai reindirizzato su WhatsApp con il tuo ordine già scritto. Confermo io disponibilità e tempi.</div>
+                                </div>
+                                <div className="how-step">
+                                    <div className="how-step-number">4</div>
+                                    <div className="how-step-title">Produzione e spedizione</div>
+                                    <div className="how-step-desc">Il pezzo viene stampato appositamente per te e spedito in 3–5 giorni lavorativi.</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* SPEDIZIONI */}
+                        <section style={{marginBottom:'60px'}}>
+                            <div className="how-header">
+                                <div className="how-label">Logistica</div>
+                                <h2 className="how-title">Spedizioni</h2>
+                            </div>
                             <div className="info-grid">
                                 <div className="info-card">
-                                    <div className="icon">✅</div>
-                                    <h3>Qualità Garantita</h3>
-                                    <p>Tutti i prodotti sono selezionati per qualità e affidabilità</p>
-                                </div>
-                                <div className="info-card">
                                     <div className="icon">🚚</div>
-                                    <h3>Spedizione Gratuita</h3>
-                                    <p>Per ordini superiori a €50</p>
+                                    <h3>Spedizione gratuita in Italia</h3>
+                                    <p>Tutti gli ordini vengono spediti gratuitamente in Italia tramite corriere espresso tracciato.</p>
                                 </div>
                                 <div className="info-card">
-                                    <div className="icon">💳</div>
-                                    <h3>Pagamenti Sicuri</h3>
-                                    <p>Carta di credito, PayPal e Bonifico</p>
+                                    <div className="icon">⏱️</div>
+                                    <h3>Tempi di consegna</h3>
+                                    <p>Ogni prodotto è stampato su ordine. I tempi variano da 3 a 7 giorni lavorativi di produzione, più 1–2 giorni di spedizione.</p>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">🌍</div>
+                                    <h3>Spedizioni internazionali</h3>
+                                    <p>Per spedizioni fuori dall'Italia contattami via WhatsApp per un preventivo personalizzato.</p>
                                 </div>
                                 <div className="info-card">
                                     <div className="icon">📦</div>
-                                    <h3>Reso 14 Giorni</h3>
-                                    <p>Diritto di recesso entro 14 giorni</p>
+                                    <h3>Imballaggio protettivo</h3>
+                                    <p>Ogni pezzo viene imballato con cura per arrivare integro. Per oggetti fragili o eventi uso imballi rinforzati.</p>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">↩️</div>
+                                    <h3>Resi e rimborsi</h3>
+                                    <p>Reso gratuito entro 14 giorni per prodotti standard non installati. I prodotti personalizzati non sono soggetti a reso salvo difetti di produzione.</p>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">📍</div>
+                                    <h3>Tracciamento</h3>
+                                    <p>Riceverai via WhatsApp il codice di tracciamento non appena il pacco è affidato al corriere.</p>
                                 </div>
                             </div>
+                        </section>
 
-                            <h2 style={{marginTop: '40px'}}>📞 Contatti</h2>
-                            <p><strong>Email:</strong> info@techstore.local<br/>
-                            <strong>Telefono:</strong> +39 02 1234567<br/>
-                            <strong>Indirizzo:</strong> Via Roma 123, Milano, Italia</p>
+                        {/* PAGAMENTI */}
+                        <section style={{marginBottom:'60px'}}>
+                            <div className="how-header">
+                                <div className="how-label">Metodi accettati</div>
+                                <h2 className="how-title">Pagamenti</h2>
+                            </div>
+                            <div className="info-grid">
+                                <div className="info-card">
+                                    <div className="icon">💳</div>
+                                    <h3>PayPal</h3>
+                                    <p>Pagamento sicuro tramite PayPal. Puoi usare il tuo saldo PayPal oppure una carta di credito/debito collegata al tuo account.</p>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">🏦</div>
+                                    <h3>Bonifico bancario</h3>
+                                    <p>Disponibile su richiesta. L'ordine viene messo in produzione dopo la ricezione del bonifico. Comunicami la causale via WhatsApp.</p>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">💬</div>
+                                    <h3>Pagamento concordato via WhatsApp</h3>
+                                    <p>Dopo aver ricevuto la tua richiesta d'ordine, ti invierò le istruzioni di pagamento direttamente in chat. Semplice e sicuro.</p>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">🔒</div>
+                                    <h3>Nessuna sorpresa</h3>
+                                    <p>Il prezzo che vedi è il prezzo finale. Nessun costo nascosto, nessuna commissione aggiuntiva.</p>
+                                </div>
+                            </div>
+                        </section>
 
-                            <h2 style={{marginTop: '40px'}}>⏰ Orari</h2>
-                            <p>Lun-Ven: 9:00 - 18:00<br/>
-                            Sabato: 10:00 - 14:00<br/>
-                            Domenica: Chiuso</p>
-                        </div>
+                        {/* CONTATTI */}
+                        <section style={{marginBottom:'60px'}}>
+                            <div className="how-header">
+                                <div className="how-label">Scrivimi</div>
+                                <h2 className="how-title">Contatti</h2>
+                            </div>
+                            <div className="info-grid" style={{gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))'}}>
+                                <div className="info-card">
+                                    <div className="icon">💬</div>
+                                    <h3>WhatsApp</h3>
+                                    <p>Il modo più veloce per contattarmi. Rispondo di solito entro poche ore.</p>
+                                    <a href="https://wa.me/393391234567" target="_blank" rel="noopener" style={{display:'inline-block',marginTop:'12px',padding:'10px 20px',background:'var(--gradient-primary)',color:'white',borderRadius:'10px',fontWeight:'700',fontSize:'0.9rem'}}>Apri WhatsApp →</a>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">📧</div>
+                                    <h3>Email</h3>
+                                    <p>Per richieste formali o preventivi dettagliati scrivi a:</p>
+                                    <p style={{marginTop:'8px',color:'var(--accent-cyan)',fontWeight:'600'}}>info@peglab.it</p>
+                                </div>
+                                <div className="info-card">
+                                    <div className="icon">⏰</div>
+                                    <h3>Disponibilità</h3>
+                                    <p>Rispondo dal lunedì al venerdì.<br/>Il sabato solo mattina.<br/>La domenica sono in officina 😄</p>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             );
@@ -3170,7 +3180,7 @@
         // ============================================
         // PRODUCT DETAIL COMPONENT
         // ============================================
-        function ProductDetail({ product, onAddToCart, onToggleWishlist, isWishlisted, onBack }) {
+        function ProductDetail({ product, onAddToCart, onBack }) {
             const [selectedImage, setSelectedImage] = React.useState(0);
             const [activeTab, setActiveTab] = React.useState('description');
             const [quantity, setQuantity] = React.useState(1);
@@ -3367,12 +3377,6 @@
                                     <button ref={addBtnRef} className="btn btn-primary" onClick={handleAddToCart}>
                                         🛒 Aggiungi al Carrello
                                     </button>
-                                    <button
-                                        className="btn-wishlist"
-                                        onClick={() => onToggleWishlist(product.id)}
-                                    >
-                                        {isWishlisted ? '❤️' : '🤍'}
-                                    </button>
                                 </div>
 
                                 {/* Info badges */}
@@ -3501,7 +3505,6 @@
             { value: 'home',     label: '🏠 Home' },
             { value: 'products', label: '🛍️ Prodotti' },
             { value: 'cart',     label: '🛒 Carrello' },
-            { value: 'wishlist', label: '❤️ Wishlist' },
             { value: 'info',     label: 'ℹ️ Info' },
         ];
 
@@ -4329,49 +4332,6 @@
         }
 
         // ============================================
-        // FOOTER COMPONENT
-        // ============================================
-        function Footer({ onAdminClick }) {
-            return (
-                <footer className="footer">
-                    <div className="footer-content">
-                        <div className="footer-section">
-                            <h4>PEGLAB</h4>
-                            <p style={{color: 'var(--text-secondary)', fontSize: '0.9rem'}}>I migliori prodotti tech del momento.</p>
-                        </div>
-                        <div className="footer-section">
-                            <h4>Navigazione</h4>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Prodotti</a></li>
-                                <li><a href="#">Carrello</a></li>
-                                <li><a href="#">Wishlist</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer-section">
-                            <h4>Assistenza</h4>
-                            <ul>
-                                <li><a href="#">Contatti</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Spedizioni</a></li>
-                                <li><a href="#">Resi</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer-section">
-                            <h4>Legale</h4>
-                            <ul>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Termini di Servizio</a></li>
-                                <li><a href="#">Cookie Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="footer-bottom">
-                        <p>© 2026 PEGLAB. Tutti i diritti riservati. {onAdminClick && <span onClick={onAdminClick} style={{cursor:'pointer', color:'var(--text-muted)', fontSize:'0.75rem', marginLeft:'10px', opacity:0.4}}>⚙️</span>}</p>
-                    </div>
-                </footer>
-            );
-        }
 
         // ============================================
         // MAIN APP COMPONENT
@@ -4380,11 +4340,13 @@
             // Legge l'URL iniziale per capire quale pagina/prodotto mostrare
             const parseUrl = () => {
                 const p = window.location.pathname;
-                if (p.startsWith('/prodotti/')) return { page: 'product-detail', slug: p.replace('/prodotti/', '') };
-                if (p === '/prodotti') return { page: 'products', slug: null };
-                if (p === '/carrello') return { page: 'cart', slug: null };
-                if (p === '/preferiti') return { page: 'wishlist', slug: null };
-                return { page: 'home', slug: null };
+                if (p.startsWith('/prodotti/')) return { page: 'product-detail', slug: p.replace('/prodotti/', ''), category: null };
+                if (p === '/moto')    return { page: 'products', slug: null, category: 'moto' };
+                if (p === '/armeria') return { page: 'products', slug: null, category: 'armeria' };
+                if (p === '/eventi')  return { page: 'products', slug: null, category: 'eventi' };
+                if (p === '/carrello') return { page: 'cart', slug: null, category: null };
+                if (p === '/info')     return { page: 'info', slug: null, category: null };
+                return { page: 'home', slug: null, category: null };
             };
 
             const initialUrl = parseUrl();
@@ -4393,12 +4355,9 @@
             const [currentPage, setCurrentPage] = React.useState(initialUrl.slug ? 'loading' : initialUrl.page);
             const [selectedProductId, setSelectedProductId] = React.useState(null);
             const [pendingSlug, setPendingSlug] = React.useState(initialUrl.slug);
-            const [activeCategory, setActiveCategory] = React.useState(null);
+            const [activeCategory, setActiveCategory] = React.useState(initialUrl.category);
             const [cart, setCart] = React.useState(() => {
                 try { return JSON.parse(localStorage.getItem('peglab-cart')) || []; } catch { return []; }
-            });
-            const [wishlist, setWishlist] = React.useState(() => {
-                try { return JSON.parse(localStorage.getItem('peglab-wishlist')) || []; } catch { return []; }
             });
             const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
@@ -4420,7 +4379,6 @@
             }, []);
 
             React.useEffect(() => { localStorage.setItem('peglab-cart', JSON.stringify(cart)); }, [cart]);
-            React.useEffect(() => { localStorage.setItem('peglab-wishlist', JSON.stringify(wishlist)); }, [wishlist]);
 
             // Risolve lo slug pendente non appena i prodotti sono caricati
             React.useEffect(() => {
@@ -4443,7 +4401,7 @@
             // Gestisce il tasto back/forward del browser
             React.useEffect(() => {
                 const handlePopState = () => {
-                    const { page, slug } = parseUrl();
+                    const { page, slug, category } = parseUrl();
                     if (slug) {
                         const product = allProducts.find(p => p.slug === slug);
                         if (product) {
@@ -4451,6 +4409,7 @@
                             setCurrentPage('product-detail');
                         }
                     } else {
+                        setActiveCategory(category);
                         setCurrentPage(page);
                     }
                 };
@@ -4480,7 +4439,7 @@
             const goToCategory = (cat) => {
                 setActiveCategory(cat);
                 setCurrentPage('products');
-                window.history.pushState({ page: 'products' }, '', '/prodotti');
+                window.history.pushState({ page: 'products', category: cat }, '', `/${cat}`);
                 window.scrollTo(0, 0);
             };
 
@@ -4528,12 +4487,6 @@
                 }
             };
 
-            // Wishlist functions
-            const toggleWishlist = (id) => {
-                setWishlist(prev =>
-                    prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
-                );
-            };
 
             // Render pages
             const renderPage = () => {
@@ -4560,9 +4513,12 @@
                             <ProductDetail
                                 product={selectedProduct}
                                 onAddToCart={addToCart}
-                                onToggleWishlist={toggleWishlist}
-                                isWishlisted={wishlist.includes(selectedProductId)}
-                                onBack={() => { setCurrentPage('products'); window.history.pushState({ page: 'products' }, '', '/prodotti'); }}
+                                onBack={() => {
+                                    const cat = selectedProduct.category;
+                                    setActiveCategory(cat);
+                                    setCurrentPage('products');
+                                    window.history.pushState({ page: 'products', category: cat }, '', `/${cat}`);
+                                }}
                             />
                             </div>
                         );
@@ -4576,18 +4532,8 @@
                                 onCheckout={() => setCurrentPage('products')}
                             />
                         );
-                    case 'wishlist':
-                        return (
-                            <WishlistPage
-                                wishlist={wishlist}
-                                products={allProducts}
-                                onAddToCart={addToCart}
-                                onToggleWishlist={toggleWishlist}
-                                onViewProduct={goToProduct}
-                            />
-                        );
                     case 'info':
-                        return <InfoPage />;
+                        return <InfoPage onBack={() => { setCurrentPage('home'); window.history.pushState({}, '', '/'); }} />;
                     case 'products': {
                         const filteredProducts = activeCategory
                             ? allProducts.filter(p => p.category === activeCategory)
@@ -4610,8 +4556,6 @@
                                         <ProductGrid
                                             products={filteredProducts}
                                             onAddToCart={addToCart}
-                                            onToggleWishlist={toggleWishlist}
-                                            wishlist={wishlist}
                                             onViewProduct={goToProduct}
                                         />
                                     </div>
@@ -4729,8 +4673,6 @@
                                                         key={product.id}
                                                         product={product}
                                                         onAddToCart={addToCart}
-                                                        onToggleWishlist={toggleWishlist}
-                                                        isWishlisted={wishlist.includes(product.id)}
                                                         onViewProduct={goToProduct}
                                                     />
                                                 ))}
@@ -4779,44 +4721,6 @@
                                     </div>
                                 </section>
 
-                                {/* COME FUNZIONA */}
-                                <section className="how-section" id="come-funziona">
-                                    <div className="container">
-                                        <div className="how-header">
-                                            <div className="how-label">Processo d'acquisto</div>
-                                            <h2 className="how-title">Come funziona l'ordine</h2>
-                                        </div>
-                                        <div className="how-steps">
-                                            <div className="how-step">
-                                                <div className="how-step-number">1</div>
-                                                <div className="how-step-title">Scegli il prodotto</div>
-                                                <div className="how-step-desc">Sfoglia il catalogo, leggi le specifiche e aggiungi al carrello quello che ti interessa.</div>
-                                            </div>
-                                            <div className="how-step">
-                                                <div className="how-step-number">2</div>
-                                                <div className="how-step-title">Inserisci i tuoi dati</div>
-                                                <div className="how-step-desc">Vai al carrello e compila il form con nome, indirizzo di spedizione, email e telefono.</div>
-                                            </div>
-                                            <div className="how-step">
-                                                <div className="how-step-number">3</div>
-                                                <div className="how-step-title">Richiesta via WhatsApp</div>
-                                                <div className="how-step-desc">Verrai reindirizzato su WhatsApp con il tuo ordine già scritto. Confermo io disponibilità e tempi.</div>
-                                            </div>
-                                            <div className="how-step">
-                                                <div className="how-step-number">4</div>
-                                                <div className="how-step-title">Produzione e spedizione</div>
-                                                <div className="how-step-desc">Il pezzo viene stampato appositamente per te e spedito in 3–5 giorni lavorativi.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-
-                                {/* CTA */}
-                                <div style={{textAlign:'center', padding:'60px 20px'}}>
-                                    <button className="btn btn-primary" onClick={() => setCurrentPage('products')} style={{padding:'18px 48px', fontSize:'1.15rem'}}>
-                                        Vai ai Prodotti
-                                    </button>
-                                </div>
 
                             </div>
                         );
@@ -4837,7 +4741,6 @@
                         goToCategory={goToCategory}
                         activeCategory={activeCategory}
                         cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
-                        wishlistCount={wishlist.length}
                         onToggleMobileMenu={() => setMobileMenuOpen(!mobileMenuOpen)}
                         mobileMenuOpen={mobileMenuOpen}
                         navItems={navItems}
@@ -4849,7 +4752,6 @@
                         setCurrentPage={setCurrentPage}
                         goToCategory={goToCategory}
                         activeCategory={activeCategory}
-                        wishlistCount={wishlist.length}
                         cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
                         navItems={navItems}
                         onClose={() => setMobileMenuOpen(false)}
@@ -4859,7 +4761,6 @@
                         {renderPage()}
                     </main>
 
-                    <Footer onAdminClick={() => setCurrentPage(isAdmin ? 'admin' : 'admin-login')} />
                 </div>
             );
         }

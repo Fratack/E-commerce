@@ -25,5 +25,11 @@
     "page": "products",
     "category": "eventi",
     "submenu": []
+  },
+  {
+    "id": 5,
+    "label": "📦 Spedizioni & Contatti",
+    "page": "info",
+    "submenu": []
   }
 ]
